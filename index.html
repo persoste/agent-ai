@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body style="overflow: hidden;">
   <div id="loader">
     <svg 
       class="container" 
@@ -32,37 +32,49 @@
     </svg>
   </div>
 
-  <header>
-    <div class="container fade-in">
-      <h1 class="title">Potenzia il tuo business con gli Agent AI</h1>
-      <p>Automazioni intelligenti per contenuti, email, assistenza clienti e altro ancora.</p>
-      <a href="#servizi" class="cta-button">Scopri i nostri servizi</a>
-    </div>
-  </header>
-
-  <section id="servizi" class="section slide-up">
-    <div class="container">
-      <h2>I nostri Agent AI</h2>
-      <div class="grid">
-        <div class="card"> <h3>Email Booster AI</h3> <p>Scrive email promozionali per negozi locali.</p> </div>
-        <div class="card"> <h3>Content Creator AI</h3> <p>Crea contenuti per Instagram, TikTok, LinkedIn.</p> </div>
-        <div class="card"> <h3>Customer Support Bot</h3> <p>Risponde alle domande frequenti via chat/email.</p> </div>
+  <div id="main-content" style="display: none;">
+    <header>
+      <div class="container fade-in">
+        <h1 class="title">Potenzia il tuo business con gli Agent AI</h1>
+        <p>Automazioni intelligenti per contenuti, email, assistenza clienti e altro ancora.</p>
+        <a href="#servizi" class="cta-button">Scopri i nostri servizi</a>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="contatto" class="section fade-in">
-    <div class="container">
-      <h2>Contattaci</h2>
-      <p>Vuoi una demo o un preventivo? Scrivici e ti rispondiamo subito.</p>
-      <a href="#" class="cta-button">Contattaci ora</a>
-    </div>
-  </section>
+    <section id="servizi" class="section slide-up">
+      <div class="container">
+        <h2>I nostri Agent AI</h2>
+        <div class="grid">
+          <div class="card"> <h3>Email Booster AI</h3> <p>Scrive email promozionali per negozi locali.</p> </div>
+          <div class="card"> <h3>Content Creator AI</h3> <p>Crea contenuti per Instagram, TikTok, LinkedIn.</p> </div>
+          <div class="card"> <h3>Customer Support Bot</h3> <p>Risponde alle domande frequenti via chat/email.</p> </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 AI Agent Studio</p>
-    </div>
-  </footer>
+    <section id="contatto" class="section fade-in">
+      <div class="container">
+        <h2>Contattaci</h2>
+        <p>Vuoi una demo o un preventivo? Scrivici e ti rispondiamo subito.</p>
+        <a href="#" class="cta-button">Contattaci ora</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 AI Agent Studio</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      const mainContent = document.getElementById("main-content");
+      loader.style.display = "none";
+      mainContent.style.display = "block";
+      document.body.style.overflow = "auto";
+    });
+  </script>
 </body>
 </html>
