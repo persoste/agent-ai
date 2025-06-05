@@ -1,1 +1,77 @@
-placeholder
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Agent Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+  <header class="hero" style="background: #e4dafc;">
+    <div class="container" data-aos="fade-up">
+      <h1 class="split-text">Potenzia il tuo business con gli Agent AI</h1>
+      <p class="subtext">Automazioni che ti fanno risparmiare tempo e far crescere il tuo impatto.</p>
+      <a href="#servizi" class="cta-button">Scopri i nostri servizi</a>
+    </div>
+  </header>
+
+  <section id="servizi" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>I nostri servizi AI</h2>
+      <div class="grid">
+        <div class="card" data-aos="zoom-in">
+          <h3>Email Booster AI</h3>
+          <p>Scrive email promozionali per negozi locali o freelance.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <h3>Content Creator AI</h3>
+          <p>Genera contenuti social per Instagram, TikTok, LinkedIn.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <h3>Customer Support Bot</h3>
+          <p>Risponde alle domande via email o chat, 24/7.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" id="funziona">
+    <div class="container" data-aos="fade-up">
+      <h2>Come funziona</h2>
+      <ol class="steps">
+        <li>Ci dici cosa automatizzare</li>
+        <li>Configuriamo l'AI su misura</li>
+        <li>Tu risparmi tempo, loro lavorano per te</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section lavender" id="about">
+    <div class="container" data-aos="fade-up">
+      <h2 class="giant-title">{ ABOUT US }</h2>
+      <div class="about-content">
+        <img src="about-image.png" alt="About us" />
+        <p>Siamo un team di automazione e AI, con l'obiettivo di aiutarti a lavorare meno e guadagnare di più grazie a soluzioni intelligenti personalizzate per te.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AI Agent Studio. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.querySelectorAll('.split-text').forEach(el => {
+      const text = el.innerText;
+      el.innerHTML = text.split('').map((char, i) =>
+        `<span class="char" style="animation-delay:${i * 30}ms">${char}</span>`).join('');
+    });
+  </script>
+</body>
+</html>
