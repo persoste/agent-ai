@@ -5,40 +5,38 @@
   padding: 0;
 }
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #f9fafb;
   color: #111;
   line-height: 1.6;
+  transition: all 0.3s ease;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 header {
   background: #f3f4f6;
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
-header h1 {
-  font-size: 2.5rem;
+h1.title {
+  font-size: 3rem;
   margin-bottom: 20px;
 }
-header p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
 .cta-button {
+  display: inline-block;
   background: #2563eb;
   color: #fff;
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
 }
 .section {
-  padding: 60px 20px;
-}
-.section.light {
-  background: #fff;
-}
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 60px 0;
 }
 .grid {
   display: grid;
@@ -50,8 +48,12 @@ header p {
   background: #fff;
   border: 1px solid #e5e7eb;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
 }
 footer {
   background: #f3f4f6;
@@ -59,4 +61,57 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   color: #555;
+}
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+.slide-up {
+  animation: slideUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loader styles */
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+}
+.container svg {
+  --uib-size: 37px;
+  --uib-color: black;
+  --uib-speed: .9s;
+  --uib-bg-opacity: .1;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  transform-origin: center;
+  overflow: visible;
+}
+.car {
+  fill: none;
+  stroke: var(--uib-color);
+  stroke-dasharray: 15, 85;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: travel var(--uib-speed) linear infinite;
+  will-change: stroke-dasharray, stroke-dashoffset;
+  transition: stroke 0.5s ease;
+}
+.track {
+  stroke: var(--uib-color);
+  opacity: var(--uib-bg-opacity);
+  transition: stroke 0.5s ease;
+}
+@keyframes travel {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 100; }
 }
