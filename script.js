@@ -1,32 +1,5 @@
 
-gsap.registerPlugin(ScrollTrigger);
-
-document.querySelectorAll('.section').forEach(section => {
-  gsap.fromTo(section,
-    { opacity: 0, y: 100 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.9,
-      scrollTrigger: {
-        trigger: section,
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play reverse play reverse",
-        invalidateOnRefresh: true
-      }
-    }
-  );
-});
-
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  });
-});
-
-// Sticky Navbar animata
+// Sticky Navbar
 window.addEventListener("scroll", function() {
   const navbar = document.querySelector("nav");
   if (window.scrollY > 50) {
@@ -36,7 +9,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
-// Split Text animazione
+// Split Text
 const headline = document.querySelector(".split-headline");
 if (headline) {
   const splitText = headline.textContent.split("");
@@ -50,12 +23,24 @@ if (headline) {
   gsap.to(".split-headline span", {
     opacity: 1,
     y: 0,
-    duration: 0.6,
+    duration: 1,
     stagger: 0.05,
-    ease: "power2.out",
+    ease: "power3.out",
     scrollTrigger: {
       trigger: headline,
       start: "top 80%"
     }
   });
 }
+
+// Parallax
+gsap.to(".parallax-bg", {
+  y: 80,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  }
+});
