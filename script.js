@@ -1,1 +1,1 @@
-console.log('Sito caricato perfettamente');
+// Script placeholder - JS aggiornato dopo
