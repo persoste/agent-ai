@@ -5,14 +5,10 @@ body {
   background: white;
   color: #111;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 section {
   padding: 80px 20px;
-  scroll-snap-align: start;
   transition: all 0.8s ease;
-  opacity: 1;
-  transform: translateY(0);
 }
 .container {
   max-width: 960px;
@@ -74,17 +70,4 @@ section {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-}
-
-/* ANIMAZIONE ENTRATA/USCITA */
-.section {
-  transition: all 0.6s ease;
-}
-.section.hide {
-  opacity: 0;
-  transform: translateY(100px);
-}
-.section.show {
-  opacity: 1;
-  transform: translateY(0);
 }
