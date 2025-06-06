@@ -1,19 +1,70 @@
 
 body {
-  font-family: 'Satoshi', sans-serif;
   margin: 0;
-  background: #fff;
+  font-family: 'Satoshi', sans-serif;
+  background: white;
   color: #111;
 }
-
-h1, h2, h3, h4 {
-  font-family: 'Satoshi', sans-serif;
+section {
+  padding: 100px 20px;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.hero {
+  background: #E8D9FF;
+  text-align: center;
+  padding: 160px 20px;
+}
+.title, .headline {
+  font-size: 3rem;
   font-weight: 700;
 }
-
-p {
-  font-weight: 400;
-  line-height: 1.6;
+.subtext {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
-
-/* Manteniamo le animazioni e il layout esistenti */
+.cta-button {
+  padding: 12px 24px;
+  font-weight: 600;
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+.card, .price-card {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+.steps li {
+  margin-bottom: 12px;
+}
+.case-grid {
+  display: flex;
+  gap: 20px;
+}
+.faq-item button {
+  background: #E8D9FF;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+}
+.faq-answer {
+  background: #f9f9f9;
+  padding: 12px;
+  display: none;
+}
+.footer {
+  background: #eee;
+  text-align: center;
+  padding: 20px;
+}
