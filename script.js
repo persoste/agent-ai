@@ -1,29 +1,40 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Hero animazione singola in entrata
-gsap.from(".hero", {
+// Hero: animazione solo all'ingresso
+gsap.from(".hero .title", {
+  y: 50,
   opacity: 0,
-  y: 80,
-  duration: 1.3,
+  duration: 1,
+  delay: 0.2,
+  ease: "power3.out"
+});
+gsap.from(".hero .subtitle", {
+  y: 40,
+  opacity: 0,
+  duration: 1,
+  delay: 0.5,
+  ease: "power3.out"
+});
+gsap.from(".hero .cta-button", {
+  y: 30,
+  opacity: 0,
+  duration: 1,
+  delay: 0.8,
   ease: "power3.out"
 });
 
-// Sezioni con toggleClass per entrata/uscita fluida
-document.querySelectorAll(".section:not(.hero)").forEach(section => {
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top 85%",
-    end: "top 10%",
-    toggleClass: { targets: section, className: "is-visible" },
-    markers: false
-  });
-});
-
-// Accordion FAQ
-document.querySelectorAll('.faq-item button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+// Tutte le altre sezioni animate in entrata con ScrollTrigger
+gsap.utils.toArray(".animate").forEach(section => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    y: 80,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out"
   });
 });

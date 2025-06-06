@@ -4,11 +4,9 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   background: white;
   color: #111;
-  scroll-behavior: smooth;
 }
 section {
-  padding: 80px 20px;
-  transition: all 0.8s ease;
+  padding: 100px 20px;
 }
 .container {
   max-width: 960px;
@@ -17,23 +15,25 @@ section {
 .hero {
   background: #E8D9FF;
   text-align: center;
-  padding: 140px 20px;
+  padding: 160px 20px;
 }
 .title {
   font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 .subtitle {
-  font-size: 1.2rem;
-  margin: 20px 0;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
 }
 .cta-button {
   background: #111;
   color: #fff;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: none;
   text-decoration: none;
   border-radius: 8px;
+  font-weight: bold;
 }
 .grid {
   display: grid;
@@ -46,38 +46,9 @@ section {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.about img {
-  max-width: 300px;
-  border-radius: 14px;
-  margin: 20px 0;
-}
-.faq-item button {
-  background: #E8D9FF;
-  padding: 12px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.faq-content {
-  display: none;
-  padding: 10px;
-  background: #f9f9f9;
-}
 .footer {
   background: #eee;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-}
-
-.section {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
