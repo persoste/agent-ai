@@ -1,54 +1,48 @@
 
-body {
-  margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
-  background: white;
-  color: #111;
-}
-section {
-  padding: 100px 20px;
-}
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
 .hero {
   background: #E8D9FF;
-  text-align: center;
   padding: 160px 20px;
+  text-align: center;
 }
-.title {
-  font-size: 3rem;
+.headline {
+  font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
-.subtitle {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
+.subtext {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 .cta-button {
+  padding: 16px 32px;
+  font-weight: 600;
   background: #111;
   color: #fff;
-  padding: 14px 28px;
-  border: none;
+  border-radius: 10px;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
+  font-size: 1rem;
 }
-.grid {
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.card-grid {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 .card {
-  background: #f2f2f2;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.footer {
-  background: #eee;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }

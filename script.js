@@ -1,40 +1,26 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Hero: animazione solo all'ingresso
-gsap.from(".hero .title", {
-  y: 50,
+// SplitText animation demo (testo principale)
+gsap.from(".split-text", {
+  y: 60,
   opacity: 0,
-  duration: 1,
-  delay: 0.2,
-  ease: "power3.out"
-});
-gsap.from(".hero .subtitle", {
-  y: 40,
-  opacity: 0,
-  duration: 1,
-  delay: 0.5,
-  ease: "power3.out"
-});
-gsap.from(".hero .cta-button", {
-  y: 30,
-  opacity: 0,
-  duration: 1,
-  delay: 0.8,
-  ease: "power3.out"
+  duration: 1.2,
+  ease: "power3.out",
+  delay: 0.2
 });
 
-// Tutte le altre sezioni animate in entrata con ScrollTrigger
-gsap.utils.toArray(".animate").forEach(section => {
+// Sezioni animate in scroll
+gsap.utils.toArray(".section").forEach(section => {
   gsap.from(section, {
     scrollTrigger: {
       trigger: section,
       start: "top 80%",
       toggleActions: "play none none none"
     },
-    y: 80,
+    y: 60,
     opacity: 0,
-    duration: 1.2,
+    duration: 1.3,
     ease: "power3.out"
   });
 });
