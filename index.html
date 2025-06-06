@@ -63,7 +63,35 @@ window.addEventListener("scroll", function() {
   }
 });
 
-// Split Text
+
+// Split Text potenziato
+const headline = document.querySelector(".split-headline");
+if (headline) {
+  const text = headline.textContent;
+  headline.innerHTML = "";
+  [...text].forEach(letter => {
+    const span = document.createElement("span");
+    span.textContent = letter;
+    span.style.display = "inline-block";
+    span.style.opacity = 0;
+    span.style.transform = "translateY(100px) rotate(10deg)";
+    headline.appendChild(span);
+  });
+
+  gsap.to(".split-headline span", {
+    opacity: 1,
+    y: 0,
+    rotate: 0,
+    duration: 1.2,
+    stagger: 0.06,
+    ease: "elastic.out(1, 0.5)",
+    scrollTrigger: {
+      trigger: headline,
+      start: "top 90%"
+    }
+  });
+}
+
 const headline = document.querySelector(".split-headline");
 if (headline) {
   const splitText = headline.textContent.split("");
@@ -89,7 +117,7 @@ if (headline) {
 
 // Parallax
 gsap.to(".parallax-bg", {
-  y: 80,
+  y: 200,
   ease: "none",
   scrollTrigger: {
     trigger: ".hero",
@@ -113,7 +141,35 @@ window.addEventListener("scroll", function() {
   }
 });
 
-// Split Text
+
+// Split Text potenziato
+const headline = document.querySelector(".split-headline");
+if (headline) {
+  const text = headline.textContent;
+  headline.innerHTML = "";
+  [...text].forEach(letter => {
+    const span = document.createElement("span");
+    span.textContent = letter;
+    span.style.display = "inline-block";
+    span.style.opacity = 0;
+    span.style.transform = "translateY(100px) rotate(10deg)";
+    headline.appendChild(span);
+  });
+
+  gsap.to(".split-headline span", {
+    opacity: 1,
+    y: 0,
+    rotate: 0,
+    duration: 1.2,
+    stagger: 0.06,
+    ease: "elastic.out(1, 0.5)",
+    scrollTrigger: {
+      trigger: headline,
+      start: "top 90%"
+    }
+  });
+}
+
 const headline = document.querySelector(".split-headline");
 if (headline) {
   const splitText = headline.textContent.split("");
@@ -142,7 +198,7 @@ if (headline) {
 
 // Parallax
 gsap.to(".parallax-bg", {
-  y: 80,
+  y: 200,
   ease: "none",
   scrollTrigger: {
     trigger: ".hero",
