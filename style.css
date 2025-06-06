@@ -1,1 +1,74 @@
-/* Style placeholder - CSS aggiornato dopo */
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background: white;
+  color: #111;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+section {
+  padding: 80px 20px;
+  scroll-snap-align: start;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.hero {
+  background: #E8D9FF;
+  text-align: center;
+  padding: 140px 20px;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.subtitle {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.cta-button {
+  background: #111;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.card {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.about img {
+  max-width: 300px;
+  border-radius: 14px;
+  margin: 20px 0;
+}
+.faq-item button {
+  background: #E8D9FF;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.faq-content {
+  display: none;
+  padding: 10px;
+  background: #f9f9f9;
+}
+.footer {
+  background: #eee;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
