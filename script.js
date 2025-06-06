@@ -36,7 +36,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
-// Split Text effetto
+// Split Text animazione
 const headline = document.querySelector(".split-headline");
 if (headline) {
   const splitText = headline.textContent.split("");
@@ -44,8 +44,6 @@ if (headline) {
   splitText.forEach(letter => {
     const span = document.createElement("span");
     span.textContent = letter;
-    span.style.display = "inline-block";
-    span.style.opacity = "0";
     headline.appendChild(span);
   });
 
