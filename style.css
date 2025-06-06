@@ -71,3 +71,13 @@ section {
   padding: 20px;
   font-size: 0.9rem;
 }
+
+.section {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

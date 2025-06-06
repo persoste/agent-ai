@@ -1,32 +1,23 @@
 
-AOS.init();
+gsap.registerPlugin(ScrollTrigger);
 
-// Animazione solo in entrata per Hero (senza ScrollTrigger)
+// Hero animazione singola in entrata
 gsap.from(".hero", {
   opacity: 0,
-  y: 100,
-  duration: 1.4,
+  y: 80,
+  duration: 1.3,
   ease: "power3.out"
 });
 
-// Le altre sezioni hanno animazioni in entrata/uscita
-gsap.registerPlugin(ScrollTrigger);
-
+// Sezioni con toggleClass per entrata/uscita fluida
 document.querySelectorAll(".section:not(.hero)").forEach(section => {
-  gsap.fromTo(section, 
-    { opacity: 0, y: 100 }, 
-    {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 85%",
-        end: "top 20%",
-        toggleActions: "play reverse play reverse"
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-      ease: "power3.out"
-    });
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top 85%",
+    end: "top 10%",
+    toggleClass: { targets: section, className: "is-visible" },
+    markers: false
+  });
 });
 
 // Accordion FAQ
