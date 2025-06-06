@@ -1,38 +1,22 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.batch(".section", {
-  onEnter: batch => gsap.to(batch, {
-    opacity: 1,
-    y: 0,
-    duration: 0.9,
-    stagger: 0.1,
-    overwrite: true
-  }),
-  onLeave: batch => gsap.to(batch, {
-    opacity: 0,
-    y: -50,
-    duration: 0.6,
-    stagger: 0.1,
-    overwrite: true
-  }),
-  onEnterBack: batch => gsap.to(batch, {
-    opacity: 1,
-    y: 0,
-    duration: 0.9,
-    stagger: 0.1,
-    overwrite: true
-  }),
-  onLeaveBack: batch => gsap.to(batch, {
-    opacity: 0,
-    y: 50,
-    duration: 0.6,
-    stagger: 0.1,
-    overwrite: true
-  }),
-  start: "top 80%",
-  end: "bottom 20%",
-  markers: false
+document.querySelectorAll('.section').forEach(section => {
+  gsap.fromTo(section,
+    { opacity: 0, y: 100 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play reverse play reverse",
+        invalidateOnRefresh: true
+      }
+    }
+  );
 });
 
 document.querySelectorAll('.faq-question').forEach(btn => {
