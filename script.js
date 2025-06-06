@@ -1,8 +1,21 @@
 
 AOS.init();
-document.querySelectorAll('.faq-item button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      entry.target.classList.remove('hide');
+    } else {
+      entry.target.classList.remove('show');
+      entry.target.classList.add('hide');
+    }
   });
+}, {
+  threshold: 0.3
+});
+
+document.querySelectorAll('.section').forEach(el => {
+  el.classList.add('hide');
+  observer.observe(el);
 });
