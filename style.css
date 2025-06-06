@@ -144,3 +144,25 @@ section {
   padding: 20px;
   font-size: 0.9rem;
 }
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 20px 40px;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  z-index: 1000;
+}
+nav.scrolled {
+  background: #ffffffee;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+nav .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #111;
+}
+.split-headline span {
+  transform: translateY(20px);
+}
