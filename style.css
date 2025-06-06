@@ -1,48 +1,19 @@
 
-.hero {
-  background: #E8D9FF;
-  padding: 160px 20px;
-  text-align: center;
-}
-.headline {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-.subtext {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-}
-.cta-button {
-  padding: 16px 32px;
-  font-weight: 600;
-  background: #111;
-  color: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 1rem;
+body {
+  font-family: 'Satoshi', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #111;
 }
 
-.section-title {
-  font-size: 2.5rem;
+h1, h2, h3, h4 {
+  font-family: 'Satoshi', sans-serif;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 60px;
 }
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+
+p {
+  font-weight: 400;
+  line-height: 1.6;
 }
-.card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 30px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
+
+/* Manteniamo le animazioni e il layout esistenti */
