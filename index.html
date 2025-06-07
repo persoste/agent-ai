@@ -1,238 +1,93 @@
 
 <!DOCTYPE html>
-
 <html lang="it">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Agent AI Studio</title>
-<link href="style.css" rel="stylesheet"/>
-<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&amp;display=swap" rel="stylesheet"/>
-<link href="https://api.fontshare.com/v2/css?f[]=panchang@700&amp;display=swap" rel="stylesheet"/>
-<link href="https://api.fontshare.com/v2/css?f[]=yoshida@700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&amp;display=swap" rel="stylesheet"/>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&amp;display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent AI Studio</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&f[]=satoshi@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<nav class="navbar">
-<div class="logo">Agent AI Studio</div>
-<ul>
-<li><a href="#servizi">Servizi</h2><div class='grid-3'></a></li>
-<li><a href="#funziona">Come funziona</a></li>
-<li><a href="#casi">Casi d'Uso</h2><div class='grid-2'></a></li>
-<li><a href="#prezzi">Prezzi</a></li>
-</ul>
-</nav>
-<section class="hero">
-<h1 class="split-text">Potenzia il tuo business con gli Agent AI</h1>
-<p class="subtext">Automazioni su misura per freelance, aziende e creator digitali</p>
-<a class="cta-button" href="#servizi">Scopri i nostri servizi</a>
---&gt;
-<section class="section" id="servizi">
-<h2 class="split-text">Servizi AI su Misura</h2>
-<p>Progettiamo <span>agenti AI personalizzati</span> che automatizzano compiti, rispondono ai clienti e fanno crescere il tuo business.</p>
-</div></section>
-<section class="section" id="funziona">
-<h2 class="split-text"><span 'clash="" display',="" font-weight:700;\"="" sans-serif;="" style='\"font-family:'>Come Funziona</h2><div class='grid-3'></span></h2>
-<div class="steps">
-<div class="step"><h3>1. Analisi</h3><p>Studiamo i tuoi obiettivi e definiamo la strategia AI.</p></div>
-<div class="step"><h3>2. Sviluppo</h3><p>Creiamo il tuo agent AI su misura.</p></div>
-<div class="step"><h3>3. Integrazione</h3><p>Lo integriamo nei tuoi strumenti e workflow.</p></div>
-<div class="step"><h3>4. Supporto</h3><p>Ti affianchiamo con supporto e miglioramenti continui.</p></div>
-</div>
-</div></section>
-<section class="section" id="casi">
-<h2 class="split-text">Casi d'Uso Reali</h2>
-<ul>
-<li><strong>Freelancer:</strong> preventivi, email, DM automatici</li>
-<li><strong>Agenzie:</strong> onboarding clienti e project brief automatici</li>
-<li><strong>Formatori:</strong> risposta automatica alle domande dei corsisti</li>
-</ul>
-</div></section>
-<section class="section" id="prezzi">
-<h2 class="split-text"><span 'clash="" display',="" font-weight:700;\"="" sans-serif;="" style='\"font-family:'>Pacchetti &amp; Prezzi</span></h2>
-<div class="pricing">
-<div class="price-box"><h3>Start</h3><p>€599 una tantum</p><p>+ €39/mese supporto</p></div>
-<div class="price-box"><h3>Pro</h3><p>€1.499 una tantum</p><p>+ €79/mese gestione</p></div>
-<div class="price-box"><h3>Business</h3><p>€4.999 una tantum</p><p>6 mesi supporto incluso</p></div>
-</div>
-</div></section>
-<section class="section" id="portfolio">
-<h2 class="split-text">Portfolio</h2>
-<div class="steps">
-<div class="step"><h3>E-commerce Agent</h3><p>Assistenza clienti su Shopify</p></div>
-<div class="step"><h3>Formazione</h3><p>AI che risponde ai corsisti h24</p></div>
-<div class="step"><h3>Agenzie</h3><p>Automazioni in Notion + Sheets</p></div>
-</div>
-</div></section>
-<section class="section" id="testimonianze">
-<h2 class="split-text">Testimonianze</h2>
-<div class="steps">
-<div class="step"><p>“Ho automatizzato tutto. Lavoro dimezzato.”</p><strong>— Marco R.</strong></div>
-<div class="step"><p>“Risposte AI per il mio corso. Fenomenale.”</p><strong>— Andrea F.</strong></div>
-<div class="step"><p>“Il nostro onboarding clienti è ora automatico.”</p><strong>— Silvia P.</strong></div>
-</div>
-</div></section>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script>
-    AOS.init({ once: false });
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray('.section').forEach((sec) => {
-      gsap.from(sec, {
-        opacity: 0,
-        y: 80,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sec,
-          start: "top 85%",
-          toggleActions: "play none none reset"
-        }
-      });
-    });
-    document.querySelectorAll('.split-text').forEach(el => {
-      const txt = el.textContent;
-      el.innerHTML = txt.split('').map(l => `<span>${l}</span>`).join('');
-    });
-    gsap.utils.toArray('.split-text span').forEach((el, i) => {
-      gsap.from(el, {
-        opacity: 0,
-        y: 20,
-        duration: 0.25,
-        delay: i * 0.005,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-          toggleActions: "play none none reset"
-        }
-      });
-    });
-  </script>
-<script>
-  window.addEventListener("scroll", () => {
-    const nav = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
-</script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const forceFont = (id) => {
-      const el = document.querySelector(`#${id} h2.split-text`);
-      if (el) {
-        el.querySelectorAll("span").forEach(span => {
-          span.style.fontFamily = "'Clash Display', sans-serif";
-          span.style.fontWeight = "700";
-        });
-      }
-    };
-    forceFont("servizi");
-    forceFont("funziona");
-    forceFont("casi");
-  });
-</script>
-<!-- ESTENSIONI -->
-<section class="section padded glass-container" id="perche-noi">
-<h2 class="section-title">Perché Scegliere Noi</h2>
-<div class="feature-blocks">
-<div class="feature-item">
-<div class="icon">⚡</div>
-<h3>Automazione su Misura</h3>
-<p>Ogni agent AI è progettato per aumentare l'efficienza nel tuo business.</p>
-</div>
-<div class="feature-item">
-<div class="icon">🎯</div>
-<h3>Focus sui Risultati</h3>
-<p>Risparmia tempo, ottieni risultati misurabili e più profitti.</p>
-</div>
-<div class="feature-item">
-<div class="icon">🤝</div>
-<h3>Supporto Continuo</h3>
-<p>Ti seguiamo passo dopo passo: dalla strategia alla consegna.</p>
-</div>
-</div>
-</div></section>
-<section class="section padded glass-container" id="contattaci">
-<h2 class="section-title">Richiedi il tuo Agent AI Personalizzato</h2>
-<form class="contact-form-modern">
-<div class="form-grid">
-<input placeholder="Nome completo" required="" type="text"/>
-<input placeholder="Email professionale" required="" type="email"/>
-</div>
-<textarea placeholder="Descrivi brevemente il tuo business e l’obiettivo del tuo Agent AI" required="" rows="5"></textarea>
-<button type="submit">Invia richiesta ora</button>
-</form>
-</div></section>
 
-<!-- Partner -->
-<!--
-  <h2 class="section-title">Hanno scelto Agent AI</h2>
-  <div class="logos-row">
-    <img src="https://dummyimage.com/120x40/ccc/fff&text=Logo+1"/>
-    <img src="https://dummyimage.com/120x40/ccc/fff&text=Logo+2"/>
-    <img src="https://dummyimage.com/120x40/ccc/fff&text=Logo+3"/>
-    <img src="https://dummyimage.com/120x40/ccc/fff&text=Logo+4"/>
+<header class="hero">
+  <h1 class="hero-title">Potenzia il tuo business<br><strong>con gli Agent AI</strong></h1>
+  <p class="hero-subtitle">Automazioni su misura per freelance, aziende e creator digitali</p>
+  <a href="#servizi" class="hero-button">Scopri i nostri servizi</a>
+</header>
+
+<section id="servizi" class="section-wide">
+  <h2 class="section-title">Servizi</h2>
+  <div class="grid-3">
+    <div><h3>Email Agent</h3><p>Risponde alle email automaticamente.</p></div>
+    <div><h3>CRM Agent</h3><p>Integrazione con Notion, Airtable, Zapier e n8n.</p></div>
+    <div><h3>Supporto AI</h3><p>Gestisce il customer service in modo autonomo 24/7.</p></div>
   </div>
-</div></section>
+</section>
 
-<!-- Numeri -->
-<section class="section padded glass-container" id="numeri">
-<h2 class="section-title">I nostri numeri</h2>
-<div class="numbers-grid">
-<div class="number-item"><span id="counter1">0</span><p>Ore risparmiate/mese</p></div>
-<div class="number-item"><span id="counter2">0</span><p>Clienti soddisfatti</p></div>
-<div class="number-item"><span id="counter3">0</span><p>Agent AI distribuiti</p></div>
-</div>
-</div></section>
-<!-- Demo Chat -->
-<section class="section padded glass-container" id="demo">
-<h2 class="section-title">Come lavora un Agent AI</h2>
-<div class="chat-demo">
-<div class="chat-bubble client">Ciao, mi serve un preventivo</div>
-<div class="chat-bubble agent">Certo! Puoi descrivermi il tuo business in breve?</div>
-<div class="chat-bubble client">Sì, vendo corsi online.</div>
-<div class="chat-bubble agent">Perfetto. Ti creo una proposta personalizzata!</div>
-</div>
-</div></section>
-<!-- FAQ Accordion -->
-<section class="section padded glass-container" id="faq">
-<h2 class="section-title">FAQ</h2>
-<div class="accordion">
-<button class="accordion-btn">Quanto costa un Agent AI?</button>
-<div class="accordion-panel"><p>Il prezzo varia in base alle funzionalità. Puoi richiedere un preventivo personalizzato.</p></div>
-<button class="accordion-btn">Quanto tempo serve per attivarlo?</button>
-<div class="accordion-panel"><p>In media 3-5 giorni lavorativi.</p></div>
-<button class="accordion-btn">Serve avere conoscenze tecniche?</button>
-<div class="accordion-panel"><p>No, ci occupiamo noi dell'integrazione completa.</p></div>
-</div>
-</div></section>
-<!-- Footer espanso -->
+<section id="funziona" class="section-wide">
+  <h2 class="section-title">Come Funziona</h2>
+  <div class="grid-2">
+    <div><h4>1. Analisi</h4><p>Studiamo il tuo business e gli obiettivi.</p></div>
+    <div><h4>2. Progettazione</h4><p>Costruiamo l'agent AI perfetto per te.</p></div>
+    <div><h4>3. Integrazione</h4><p>Lo colleghiamo con i tuoi tool digitali.</p></div>
+    <div><h4>4. Affiancamento</h4><p>Ti supportiamo e miglioriamo costantemente.</p></div>
+  </div>
+</section>
 
-<footer style="background:#000;color:#fff;text-align:center;padding:2rem 1rem;font-size:1rem;">
-© 2025 Agent AI Studio. Tutti i diritti riservati.
+<section id="casi" class="section-wide">
+  <h2 class="section-title">Casi d'Uso Reali</h2>
+  <div class="grid-2">
+    <div><h4>Freelancer</h4><p>DM, email, lead generation automatizzati.</p></div>
+    <div><h4>Formatori</h4><p>Onboarding e comunicazione con gli iscritti via AI.</p></div>
+  </div>
+</section>
+
+<section id="numeri" class="section-wide">
+  <h2 class="section-title">I nostri numeri</h2>
+  <div class="grid-3">
+    <div><h3>1200+</h3><p>Ore risparmiate/mese</p></div>
+    <div><h3>300+</h3><p>Clienti soddisfatti</p></div>
+    <div><h3>90+</h3><p>Agent AI distribuiti</p></div>
+  </div>
+</section>
+
+<section id="demo" class="section-wide">
+  <h2 class="section-title">Come lavora un Agent AI</h2>
+  <p style="max-width: 900px; margin: auto; font-size: 1.2rem;">Un Agent AI studia il tuo business, identifica le necessità del cliente e automatizza risposte, onboarding, email, preventivi e altro. Lavora 24/7, senza pause, integrandosi con i tuoi strumenti digitali.</p>
+</section>
+
+<section id="prezzi" class="section-wide">
+  <h2 class="section-title">Pacchetti & Prezzi</h2>
+  <div class="grid-3">
+    <div><h3>Start</h3><p>€599<br>1 Agent + supporto base</p></div>
+    <div><h3>Pro</h3><p>€1099<br>2 Agent + supporto dedicato</p></div>
+    <div><h3>Business</h3><p>€1599<br>3 Agent + supporto premium</p></div>
+  </div>
+</section>
+
+<section id="faq" class="section-wide">
+  <h2 class="section-title">FAQ</h2>
+  <div class="grid-2">
+    <div><h4>Quanto costa un Agent AI?</h4><p>Dipende dalle funzionalità. Contattaci per un preventivo personalizzato.</p></div>
+    <div><h4>Quanto tempo serve per attivarlo?</h4><p>In media da 3 a 5 giorni lavorativi.</p></div>
+    <div><h4>Serve avere conoscenze tecniche?</h4><p>No, ci occupiamo noi di tutto: dall’analisi all’implementazione.</p></div>
+  </div>
+</section>
+
+<section id="contattaci" class="section-wide">
+  <h2 class="section-title">Richiedi il tuo Agent AI</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Nome completo" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Descrivi il tuo progetto o bisogno specifico..." rows="5" required></textarea>
+    <button type="submit">Invia richiesta</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <p>© 2025 Agent AI Studio. Tutti i diritti riservati.</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
-<script>
-  window.onload = function () {
-    new CountUp('counter1', 120).start();
-    new CountUp('counter2', 85).start();
-    new CountUp('counter3', 30).start();
-    const acc = document.getElementsByClassName("accordion-btn");
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].onclick = function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        panel.style.display = panel.style.display === "block" ? "none" : "block";
-      }
-    }
-  }
-</script>
-</div></section></body>
+</body>
 </html>
