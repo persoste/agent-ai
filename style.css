@@ -407,3 +407,44 @@ section#casi h2 {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+
+
+.perche-noi-section {
+  padding: 80px 20px;
+  background: #f5f2ff;
+  margin-top: 80px;
+  text-align: center;
+}
+.perche-noi-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-family: 'Clash Display', sans-serif;
+}
+.reasons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.reason-box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  max-width: 320px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reason-box h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.reason-box p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
