@@ -244,3 +244,11 @@ section#casi h2 {
   font-family: 'Clash Display', sans-serif !important;
   font-weight: 700 !important;
 }
+
+.logo {
+  font-family: 'Unbounded', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
