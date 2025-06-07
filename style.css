@@ -5,50 +5,63 @@ body {
   background: #f5f2ff;
   color: #111;
 }
-
 h1, h2, h3 {
   font-family: 'Clash Display', sans-serif;
 }
-
-.hero {
-  text-align: center;
-  padding: 6rem 2rem;
+.hero-full {
+  height: 100vh;
   background: #e8d9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
 }
 .hero-title {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 .hero-subtitle {
   font-size: 1.2rem;
-  margin: 1rem 0 2rem;
+  margin-bottom: 2.5rem;
 }
-.hero-button {
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero-buttons button {
   padding: 1rem 2rem;
+  font-weight: bold;
   background: #000;
   color: #fff;
+  border: none;
   border-radius: 0.7rem;
-  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.hero-buttons button:hover {
+  transform: scale(1.05);
+  background: #111;
 }
 
 .section-wide {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
 }
-
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
-
 .grid-3, .grid-2 {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
 }
-
 .grid-3 > div, .grid-2 > div {
   background: #fff;
   padding: 2rem;
@@ -57,7 +70,21 @@ h1, h2, h3 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   text-align: center;
 }
-
+.grid-3 ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
 .contact-form {
   max-width: 600px;
   margin: auto;
@@ -70,53 +97,51 @@ h1, h2, h3 {
   border-radius: 0.6rem;
   border: 1px solid #ccc;
 }
-.contact-form button {
-  padding: 1rem;
-  font-weight: bold;
-  background: #000;
-  color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-}
-
 .site-footer {
   background: #000;
   color: #fff;
   text-align: center;
   padding: 2rem;
-  margin-top: 4rem;
-}
-
-
-/* Miglioramento spaziatura per sezioni e griglie */
-.section-wide {
-  padding: 6rem 2rem;
-  margin-bottom: 4rem;
-}
-
-.grid-3 > div, .grid-2 > div {
-  padding: 2.5rem 2rem;
-  margin-bottom: 1rem;
-}
-
-.section-title {
-  margin-bottom: 3rem;
-}
-
-.contact-form {
-  padding-top: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 1.2rem;
-}
-
-.hero {
-  padding-top: 8rem;
-  padding-bottom: 6rem;
-}
-
-footer.site-footer {
   margin-top: 6rem;
+}
+
+
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e8d9ff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#demo button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+#demo button:hover {
+  transform: scale(1.05);
+  background: #222;
+}
+
+.light-bg {
+  background-color: #f1e8fd;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+  margin-bottom: 4rem;
 }

@@ -7,23 +7,48 @@
   <title>Agent AI Studio</title>
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&f[]=satoshi@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function scrollToSection(id, speed) {
+      const target = document.querySelector(id);
+      if (!target) return;
+      const position = target.getBoundingClientRect().top + window.scrollY;
+      let start = null;
+      window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const easing = progress < speed ? progress / speed : 1 + 1.5 * (progress - speed) / 200;
+        const scrollTo = Math.min(window.scrollY + easing * 15, position);
+        window.scrollTo(0, scrollTo);
+        if (scrollTo < position) {
+          window.requestAnimationFrame(step);
+        }
+      });
+    }
+  </script>
 </head>
 <body>
 
-<header class="hero">
+<div id="preloader">
+  <div class="container">
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+  </div>
+</div>
+
+
+<section id="hero" class="hero-full">
   <h1 class="hero-title">Potenzia il tuo business<br><strong>con gli Agent AI</strong></h1>
   <p class="hero-subtitle">Automazioni su misura per freelance, aziende e creator digitali</p>
-  <a href="#servizi" class="hero-button">Scopri i nostri servizi</a>
-</header>
-
-<section id="servizi" class="section-wide">
-  <h2 class="section-title">Servizi</h2>
-  <div class="grid-3">
-    <div><h3>Email Agent</h3><p>Risponde alle email automaticamente.</p></div>
-    <div><h3>CRM Agent</h3><p>Integrazione con Notion, Airtable, Zapier e n8n.</p></div>
-    <div><h3>Supporto AI</h3><p>Gestisce il customer service in modo autonomo 24/7.</p></div>
+  <div class="hero-buttons">
+    <button onclick="scrollToSection('#pacchetti', 600)">Scopri i nostri servizi</button>
+    <button onclick="scrollToSection('#form-section', 800)">Crea la tua Agent AI</button>
   </div>
 </section>
+
+<!-- il resto del contenuto verrà attaccato subito dopo -->
+
 
 <section id="funziona" class="section-wide">
   <h2 class="section-title">Come Funziona</h2>
@@ -31,56 +56,53 @@
     <div><h4>1. Analisi</h4><p>Studiamo il tuo business e gli obiettivi.</p></div>
     <div><h4>2. Progettazione</h4><p>Costruiamo l'agent AI perfetto per te.</p></div>
     <div><h4>3. Integrazione</h4><p>Lo colleghiamo con i tuoi tool digitali.</p></div>
-    <div><h4>4. Affiancamento</h4><p>Ti supportiamo e miglioriamo costantemente.</p></div>
+    <div><h4>4. Supporto Continuo</h4><p>Ti assistiamo e ottimizziamo ogni mese.</p></div>
   </div>
 </section>
 
-<section id="casi" class="section-wide">
-  <h2 class="section-title">Casi d'Uso Reali</h2>
-  <div class="grid-2">
-    <div><h4>Freelancer</h4><p>DM, email, lead generation automatizzati.</p></div>
-    <div><h4>Formatori</h4><p>Onboarding e comunicazione con gli iscritti via AI.</p></div>
-  </div>
-</section>
-
-<section id="numeri" class="section-wide">
-  <h2 class="section-title">I nostri numeri</h2>
+<section id="pacchetti" class="section-wide">
+  <h2 class="section-title">Servizi & Pacchetti</h2>
   <div class="grid-3">
-    <div><h3>1200+</h3><p>Ore risparmiate/mese</p></div>
-    <div><h3>300+</h3><p>Clienti soddisfatti</p></div>
-    <div><h3>90+</h3><p>Agent AI distribuiti</p></div>
+    <div>
+      <h3>Start</h3>
+      <p>€599 una tantum<br>€39/mese</p>
+      <ul>
+        <li>1 Agent AI</li>
+        <li>Email Agent</li>
+        <li>Supporto base</li>
+      </ul>
+      <button onclick="showForm('Start')">Voglio questo</button>
+    </div>
+    <div>
+      <h3>Pro</h3>
+      <p>€1099 una tantum<br>€69/mese</p>
+      <ul>
+        <li>2 Agent AI</li>
+        <li>CRM + Email Agent</li>
+        <li>Supporto prioritario</li>
+      </ul>
+      <button onclick="showForm('Pro')">Voglio questo</button>
+    </div>
+    <div>
+      <h3>Business</h3>
+      <p>€1599 una tantum<br>€99/mese</p>
+      <ul>
+        <li>3 Agent AI</li>
+        <li>Custom AI + automazioni</li>
+        <li>Supporto completo</li>
+      </ul>
+      <button onclick="showForm('Business')">Voglio questo</button>
+    </div>
   </div>
 </section>
 
-<section id="demo" class="section-wide">
-  <h2 class="section-title">Come lavora un Agent AI</h2>
-  <p style="max-width: 900px; margin: auto; font-size: 1.2rem;">Un Agent AI studia il tuo business, identifica le necessità del cliente e automatizza risposte, onboarding, email, preventivi e altro. Lavora 24/7, senza pause, integrandosi con i tuoi strumenti digitali.</p>
-</section>
-
-<section id="prezzi" class="section-wide">
-  <h2 class="section-title">Pacchetti & Prezzi</h2>
-  <div class="grid-3">
-    <div><h3>Start</h3><p>€599<br>1 Agent + supporto base</p></div>
-    <div><h3>Pro</h3><p>€1099<br>2 Agent + supporto dedicato</p></div>
-    <div><h3>Business</h3><p>€1599<br>3 Agent + supporto premium</p></div>
-  </div>
-</section>
-
-<section id="faq" class="section-wide">
-  <h2 class="section-title">FAQ</h2>
-  <div class="grid-2">
-    <div><h4>Quanto costa un Agent AI?</h4><p>Dipende dalle funzionalità. Contattaci per un preventivo personalizzato.</p></div>
-    <div><h4>Quanto tempo serve per attivarlo?</h4><p>In media da 3 a 5 giorni lavorativi.</p></div>
-    <div><h4>Serve avere conoscenze tecniche?</h4><p>No, ci occupiamo noi di tutto: dall’analisi all’implementazione.</p></div>
-  </div>
-</section>
-
-<section id="contattaci" class="section-wide">
+<section id="form-section" class="section-wide">
   <h2 class="section-title">Richiedi il tuo Agent AI</h2>
   <form class="contact-form">
     <input type="text" placeholder="Nome completo" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Descrivi il tuo progetto o bisogno specifico..." rows="5" required></textarea>
+    <input type="email" placeholder="Email professionale" required>
+    <input type="text" id="selected-package" readonly placeholder="Pacchetto selezionato">
+    <textarea rows="5" placeholder="Descrivi cosa vuoi che il tuo agent faccia (email, DM, CRM, ecc.)" required></textarea>
     <button type="submit">Invia richiesta</button>
   </form>
 </section>
@@ -88,6 +110,40 @@
 <footer class="site-footer">
   <p>© 2025 Agent AI Studio. Tutti i diritti riservati.</p>
 </footer>
+
+
+
+<script>
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.getElementById("preloader").classList.add("hidden");
+  }, 600);
+});
+</script>
+
+
+<script>
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+function scrollToSection(id, duration) {
+  const target = document.querySelector(id);
+  if (!target) return;
+  const targetPos = target.getBoundingClientRect().top + window.scrollY;
+  const startPos = window.scrollY;
+  const distance = targetPos - startPos;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easeOutCubic(timeElapsed / duration) * distance + startPos;
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+  requestAnimationFrame(animation);
+}
+</script>
 
 </body>
 </html>
