@@ -173,5 +173,86 @@
 <footer class="site-footer">
 <p>© 2025 Agent AI Studio. Tutti i diritti riservati.</p>
 </footer>
+
+<!-- Partner -->
+<section class="section padded" id="partner">
+  <h2 class="section-title">Hanno scelto Agent AI</h2>
+  <div class="logos-row">
+    <img src="https://dummyimage.com/120x40/ccc/fff&text=Logo+1"/>
+    <img src="https://dummyimage.com/120x40/ccc/fff&text=Logo+2"/>
+    <img src="https://dummyimage.com/120x40/ccc/fff&text=Logo+3"/>
+    <img src="https://dummyimage.com/120x40/ccc/fff&text=Logo+4"/>
+  </div>
+</section>
+
+<!-- Numeri -->
+<section class="section padded" id="numeri">
+  <h2 class="section-title">I nostri numeri</h2>
+  <div class="numbers-grid">
+    <div class="number-item"><span id="counter1">0</span><p>Ore risparmiate/mese</p></div>
+    <div class="number-item"><span id="counter2">0</span><p>Clienti soddisfatti</p></div>
+    <div class="number-item"><span id="counter3">0</span><p>Agent AI distribuiti</p></div>
+  </div>
+</section>
+
+<!-- Demo Chat -->
+<section class="section padded" id="demo">
+  <h2 class="section-title">Come lavora un Agent AI</h2>
+  <div class="chat-demo">
+    <div class="chat-bubble client">Ciao, mi serve un preventivo</div>
+    <div class="chat-bubble agent">Certo! Puoi descrivermi il tuo business in breve?</div>
+    <div class="chat-bubble client">Sì, vendo corsi online.</div>
+    <div class="chat-bubble agent">Perfetto. Ti creo una proposta personalizzata!</div>
+  </div>
+</section>
+
+<!-- FAQ Accordion -->
+<section class="section padded" id="faq">
+  <h2 class="section-title">FAQ</h2>
+  <div class="accordion">
+    <button class="accordion-btn">Quanto costa un Agent AI?</button>
+    <div class="accordion-panel"><p>Il prezzo varia in base alle funzionalità. Puoi richiedere un preventivo personalizzato.</p></div>
+    <button class="accordion-btn">Quanto tempo serve per attivarlo?</button>
+    <div class="accordion-panel"><p>In media 3-5 giorni lavorativi.</p></div>
+    <button class="accordion-btn">Serve avere conoscenze tecniche?</button>
+    <div class="accordion-panel"><p>No, ci occupiamo noi dell'integrazione completa.</p></div>
+  </div>
+</section>
+
+<!-- Footer espanso -->
+<footer class="site-footer-expanded">
+  <div class="footer-cols">
+    <div>
+      <h4>Contatti</h4>
+      <p>Email: info@agentai.studio</p>
+      <p>WhatsApp: +39 000 000 0000</p>
+    </div>
+    <div>
+      <h4>Link Utili</h4>
+      <a href="#servizi">Servizi</a><br>
+      <a href="#faq">FAQ</a><br>
+      <a href="#contattaci">Richiesta Agent</a>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2025 Agent AI Studio. Tutti i diritti riservati.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+<script>
+  window.onload = function () {
+    new CountUp('counter1', 120).start();
+    new CountUp('counter2', 85).start();
+    new CountUp('counter3', 30).start();
+    const acc = document.getElementsByClassName("accordion-btn");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].onclick = function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      }
+    }
+  }
+</script>
+
 </body>
 </html>
