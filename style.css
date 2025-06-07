@@ -252,3 +252,11 @@ section#casi h2 {
   letter-spacing: -0.5px;
   text-transform: uppercase;
 }
+
+#servizi h2.split-text span,
+#funziona h2.split-text span,
+#casi h2.split-text span {
+  font-family: 'Clash Display', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px;
+}
