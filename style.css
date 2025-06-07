@@ -169,3 +169,22 @@ body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'General Sans', sans-serif;
+}
+
+.navbar.scrolled {
+  background: #E8D9FF;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
