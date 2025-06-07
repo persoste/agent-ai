@@ -371,3 +371,26 @@ section#casi h2 {
   font-family: 'Satoshi', sans-serif;
   margin-top: 4rem;
 }
+
+
+.accordion {
+  background: white;
+  border-radius: 0.7rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+.accordion:hover {
+  background: #f4f4f4;
+}
+.accordion-title {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.accordion-content {
+  font-size: 1.05rem;
+  color: #333;
+}
