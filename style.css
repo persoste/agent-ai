@@ -1,46 +1,118 @@
 
-body {
-  font-family: 'Satoshi', sans-serif;
+/* Base Reset */
+* {
   margin: 0;
   padding: 0;
-  background: #fff;
-  color: #111;
+  box-sizing: border-box;
 }
-header {
-  position: fixed;
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: #fff;
+  color: #111;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar-clean {
+  position: sticky;
   top: 0;
   width: 100%;
-  padding: 1rem 2rem;
   background: transparent;
-  transition: background 0.3s ease;
   z-index: 1000;
+  transition: background-color 0.3s ease;
 }
-header.scrolled {
-  background: #E8D9FF;
+
+.navbar-clean.scrolled {
+  background-color: #E8D9FF;
 }
+
 .navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .nav-links {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 1.5rem;
 }
-.nav-links a, .nav-cta {
+
+.nav-links a {
   text-decoration: none;
-  color: #111;
+  color: #000;
+  font-weight: 500;
 }
+
+/* Hero Section */
 .hero {
   min-height: 100vh;
-  padding-top: 120px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  background: #f9f9f9;
+  padding: 4rem 2rem;
 }
-.split-headline {
-  font-size: 2.8rem;
+
+.headline {
+  font-size: 3rem;
   font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Cards & Layout */
+.card-grid, .price-grid, .case-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card, .price-card, .case {
+  background: #f1f1f1;
+  padding: 2rem;
+  border-radius: 1rem;
+  flex: 1 1 calc(33% - 2rem);
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
 }
