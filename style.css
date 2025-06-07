@@ -1,17 +1,22 @@
 
 body {
-  margin: 0;
   font-family: 'Satoshi', sans-serif;
+  margin: 0;
+  padding: 0;
   background: #fff;
   color: #111;
 }
 header {
-  background: white;
-  padding: 1em 2em;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
-  border-bottom: 1px solid #eee;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: transparent;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+header.scrolled {
+  background: #E8D9FF;
 }
 .navbar-inner {
   display: flex;
@@ -19,56 +24,23 @@ header {
   align-items: center;
 }
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 1.5em;
+  list-style: none;
+  gap: 1.5rem;
+}
+.nav-links a, .nav-cta {
+  text-decoration: none;
+  color: #111;
 }
 .hero {
-  padding: 6em 2em;
-  background: #E8D9FF;
+  min-height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
-.section {
-  padding: 5em 2em;
-}
-.section-title {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5em;
-}
-.card {
-  padding: 1.5em;
-  background: #f8f8f8;
-  border-radius: 10px;
-}
-.steps {
-  list-style: none;
-  counter-reset: step;
-}
-.steps li {
-  counter-increment: step;
-  margin-bottom: 1em;
-  font-size: 1.1em;
-}
-.cta-section {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 4em 2em;
-}
-.cta-button {
-  background: #E8D9FF;
-  color: #000;
-  padding: 1em 2em;
-  border-radius: 8px;
-  text-decoration: none;
-}
-.footer {
-  text-align: center;
-  padding: 2em 1em;
-  background: #f1f1f1;
+.split-headline {
+  font-size: 2.8rem;
+  font-weight: 700;
 }
