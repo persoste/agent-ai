@@ -372,25 +372,28 @@ section#casi h2 {
   margin-top: 4rem;
 }
 
+body {
+  background-color: #f8f6ff;
+  font-family: 'Satoshi', sans-serif;
+  color: #111;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
 
-.accordion {
-  background: white;
-  border-radius: 0.7rem;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  cursor: pointer;
+.container, .section, .glass-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.4rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
 }
-.accordion:hover {
-  background: #f4f4f4;
-}
-.accordion-title {
+
+.section-title {
   font-family: 'Clash Display', sans-serif;
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-.accordion-content {
-  font-size: 1.05rem;
-  color: #333;
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
