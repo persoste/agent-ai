@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,6 +10,131 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Satoshi', sans-serif;
+      background-color: #fff;
+      color: #000;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: transparent;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: #E8D9FF;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .navbar ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+    }
+
+    .navbar a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #E8D9FF;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      max-width: 800px;
+      line-height: 1.1;
+    }
+
+    .hero .subtext {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      max-width: 700px;
+    }
+
+    .cta-button {
+      margin-top: 2.5rem;
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .steps, .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .step, .price-box {
+      background: #f8f8f8;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .step:hover, .price-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 1rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #000;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <nav id="navbar" class="navbar">
@@ -21,11 +147,11 @@
     </ul>
   </nav>
 
-  <header class="hero" data-aos="fade-up">
+  <section class="hero" data-aos="fade">
     <h1 class="split-text">Potenzia il tuo business con gli Agent AI</h1>
     <p class="subtext">Automazioni su misura per freelance, aziende e creator digitali</p>
     <a href="#servizi" class="cta-button">Scopri i nostri servizi</a>
-  </header>
+  </section>
 
   <section id="servizi" class="section" data-aos="fade-up">
     <h2 class="split-text">Servizi AI su Misura</h2>
@@ -37,19 +163,19 @@
     <div class="steps">
       <div class="step">
         <h3>1. Analisi personalizzata</h3>
-        <p>Studiamo i tuoi obiettivi e identifichiamo le aree in cui un Agent AI può darti valore.</p>
+        <p>Studiamo i tuoi obiettivi e identifichiamo le aree in cui un Agent AI può darti valore</p>
       </div>
       <div class="step">
         <h3>2. Costruzione dell'agent</h3>
-        <p>Creiamo e testiamo l'agente AI sulla base delle tue esigenze specifiche.</p>
+        <p>Creiamo e testiamo l'agente AI sulla base delle tue esigenze specifiche</p>
       </div>
       <div class="step">
         <h3>3. Integrazione e formazione</h3>
-        <p>Ti aiutiamo a integrarlo nei tuoi processi e formiamo il tuo team all’uso.</p>
+        <p>Ti aiutiamo a integrarlo nei tuoi processi e formiamo il tuo team all’uso</p>
       </div>
       <div class="step">
         <h3>4. Supporto continuo</h3>
-        <p>Offriamo assistenza post-lancio e miglioramenti su misura.</p>
+        <p>Offriamo assistenza post-lancio e miglioramenti su misura</p>
       </div>
     </div>
   </section>
@@ -57,9 +183,9 @@
   <section id="casi" class="section" data-aos="fade-up">
     <h2 class="split-text">Casi d'Uso Reali</h2>
     <ul>
-      <li><strong>Freelancer:</strong> automazione risposte email e preventivi istantanei.</li>
-      <li><strong>Agenzie:</strong> gestione clienti, follow-up automatici, onboarding intelligente.</li>
-      <li><strong>Coach e formatori:</strong> AI agent che rispondono alle domande dei corsisti 24/7.</li>
+      <li><strong>Freelancer:</strong> automazione risposte email e preventivi istantanei</li>
+      <li><strong>Agenzie:</strong> gestione clienti, follow-up automatici, onboarding intelligente</li>
+      <li><strong>Coach e formatori:</strong> AI agent che rispondono alle domande dei corsisti 24/7</li>
     </ul>
   </section>
 
@@ -89,7 +215,6 @@
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="split-text.js"></script>
   <script>
     AOS.init({ once: false });
     document.querySelectorAll('.split-text').forEach(el => {
