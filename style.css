@@ -397,3 +397,40 @@ body {
   text-align: center;
   letter-spacing: 0.5px;
 }
+
+
+.section-wide {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+.grid-3 {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid-3 > div {
+  flex: 1 1 280px;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.grid-2 {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.grid-2 > div {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  flex: 1 1 400px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
