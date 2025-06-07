@@ -188,3 +188,8 @@ body {
   background: #E8D9FF;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
+
+h1, h2, h3, .price-box h3, .step h3 {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 600;
+}
