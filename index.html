@@ -135,5 +135,22 @@
   });
 </script>
 
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const forceFont = (id) => {
+      const el = document.querySelector(`#${id} h2.split-text`);
+      if (el) {
+        el.querySelectorAll("span").forEach(span => {
+          span.style.fontFamily = "'Clash Display', sans-serif";
+          span.style.fontWeight = "700";
+        });
+      }
+    };
+    forceFont("servizi");
+    forceFont("funziona");
+    forceFont("casi");
+  });
+</script>
 </body>
 </html>
