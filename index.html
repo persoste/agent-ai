@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent AI Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <nav id="navbar" class="navbar">
+    <div class="logo">Agent AI Studio</div>
+    <ul>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#funziona">Come funziona</a></li>
+      <li><a href="#casi">Casi d'Uso</a></li>
+      <li><a href="#prezzi">Prezzi</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" data-aos="fade-up">
+    <h1 class="split-text">Potenzia il tuo business con gli Agent AI</h1>
+    <p class="subtext">Automazioni su misura per freelance, aziende e creator digitali</p>
+    <a href="#servizi" class="cta-button">Scopri i nostri servizi</a>
+  </header>
+
+  <section id="servizi" class="section" data-aos="fade-up">
+    <h2 class="split-text">Servizi AI su Misura</h2>
+    <p>Progettiamo agenti AI personalizzati che automatizzano compiti, rispondono ai clienti e fanno crescere il tuo business.</p>
+  </section>
+
+  <section id="funziona" class="section" data-aos="fade-up">
+    <h2 class="split-text">Come Funziona</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Analisi personalizzata</h3>
+        <p>Studiamo i tuoi obiettivi e identifichiamo le aree in cui un Agent AI può darti valore.</p>
+      </div>
+      <div class="step">
+        <h3>2. Costruzione dell'agent</h3>
+        <p>Creiamo e testiamo l'agente AI sulla base delle tue esigenze specifiche.</p>
+      </div>
+      <div class="step">
+        <h3>3. Integrazione e formazione</h3>
+        <p>Ti aiutiamo a integrarlo nei tuoi processi e formiamo il tuo team all’uso.</p>
+      </div>
+      <div class="step">
+        <h3>4. Supporto continuo</h3>
+        <p>Offriamo assistenza post-lancio e miglioramenti su misura.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="casi" class="section" data-aos="fade-up">
+    <h2 class="split-text">Casi d'Uso Reali</h2>
+    <ul>
+      <li><strong>Freelancer:</strong> automazione risposte email e preventivi istantanei.</li>
+      <li><strong>Agenzie:</strong> gestione clienti, follow-up automatici, onboarding intelligente.</li>
+      <li><strong>Coach e formatori:</strong> AI agent che rispondono alle domande dei corsisti 24/7.</li>
+    </ul>
+  </section>
+
+  <section id="prezzi" class="section" data-aos="fade-up">
+    <h2 class="split-text">Pacchetti & Prezzi</h2>
+    <div class="pricing">
+      <div class="price-box">
+        <h3>Start</h3>
+        <p>Ideale per freelance o piccoli team</p>
+        <p class="price">€399</p>
+      </div>
+      <div class="price-box">
+        <h3>Pro</h3>
+        <p>Perfetto per aziende e agenzie</p>
+        <p class="price">€999</p>
+      </div>
+      <div class="price-box">
+        <h3>Elite</h3>
+        <p>Agent AI su misura, massima personalizzazione</p>
+        <p class="price">€1999+</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" data-aos="fade-up">
+    <p>&copy; 2025 Agent AI Studio. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="split-text.js"></script>
+  <script>
+    AOS.init({ once: false });
+    document.querySelectorAll('.split-text').forEach(el => {
+      const text = el.textContent;
+      el.innerHTML = text.split('').map(c => `<span>${c}</span>`).join('');
+    });
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>
