@@ -198,3 +198,10 @@ h1, h2, h3, .split-text, .step h3, .price-box h3 {
   font-family: 'Clash Display', sans-serif !important;
   font-weight: 700 !important;
 }
+
+.split-text,
+h2.split-text,
+h3.split-text {
+  font-family: 'Clash Display', sans-serif !important;
+  font-weight: 700 !important;
+}
