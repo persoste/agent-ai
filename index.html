@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Agent AI Studio | Automazioni Intelligenti per Freelance e Aziende
+  </title>
+  <meta content="Scopri Agent AI Studio: agenti AI personalizzati per automatizzare il tuo business. Soluzioni su misura per freelance, aziende e creator digitali." name="description"/>
+  <meta content="agent AI, automazioni AI, AI per aziende, AI per freelance, AI su misura, agenti virtuali, CRM AI, Email AI" name="keywords"/>
+  <meta content="Agent AI Studio" name="author"/>
+  <meta content="Agent AI Studio | Automazioni Intelligenti" property="og:title"/>
+  <meta content="Agenti AI su misura per aziende e professionisti. Scopri pacchetti personalizzati, demo e supporto continuo." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://agentai.studio" property="og:url"/>
+  <meta content="https://agentai.studio/preview.png" property="og:image"/>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&amp;f[]=satoshi@400&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <script>
+   function scrollToSection(id, speed) {
+      const target = document.querySelector(id);
+      if (!target) return;
+      const position = target.getBoundingClientRect().top + window.scrollY;
+      let start = null;
+      window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const easing = progress < speed ? progress / speed : 1 + 1.5 * (progress - speed) / 200;
+        const scrollTo = Math.min(window.scrollY + easing * 15, position);
+        window.scrollTo(0, scrollTo);
+        if (scrollTo < position) {
+          window.requestAnimationFrame(step);
+        }
+      });
+    }
+  </script>
+ </head>
+ <body>
+  <div id="preloader">
+   <div class="container">
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+    <div class="dot">
+    </div>
+   </div>
+  </div>
+  <section class="hero-full" id="hero">
+   <h1 class="hero-title">
+    Potenzia il tuo business
+    <br/>
+    <strong>
+     con gli Agent AI
+    </strong>
+   </h1>
+   <p class="hero-subtitle">
+    Automazioni su misura per freelance, aziende e creator digitali
+   </p>
+   <div class="hero-buttons">
+    <button onclick="scrollToSection('#pacchetti', 600)">
+     Scopri i nostri servizi
+    </button>
+    <button onclick="scrollToSection('#form-section', 800)">
+     Crea la tua Agent AI
+    </button>
+   </div>
+  </section>
+  <!-- il resto del contenuto verrà attaccato subito dopo -->
+  <section class="section-wide" id="funziona">
+   <h2 class="section-title">
+    Come Funziona
+   </h2>
+   <div class="grid-2">
+    <div>
+     <h4>
+      1. Analisi
+     </h4>
+     <p>
+      Studiamo il tuo business e gli obiettivi.
+     </p>
+    </div>
+    <div>
+     <h4>
+      2. Progettazione
+     </h4>
+     <p>
+      Costruiamo l'agent AI perfetto per te.
+     </p>
+    </div>
+    <div>
+     <h4>
+      3. Integrazione
+     </h4>
+     <p>
+      Lo colleghiamo con i tuoi tool digitali.
+     </p>
+    </div>
+    <div>
+     <h4>
+      4. Supporto Continuo
+     </h4>
+     <p>
+      Ti assistiamo e ottimizziamo ogni mese.
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="perche-noi-section" id="perche-noi">
+   <div class="container">
+    <h2 class="section-title">
+     Perché Scegliere Noi
+    </h2>
+    <div class="reasons-grid">
+     <div class="reason-box">
+      <h3>
+       Esperienza comprovata
+      </h3>
+      <p>
+       Abbiamo realizzato decine di Agent AI per clienti in tutto il mondo, con risultati concreti e tracciabili.
+      </p>
+     </div>
+     <div class="reason-box">
+      <h3>
+       Personalizzazione totale
+      </h3>
+      <p>
+       Ogni Agent AI è cucito su misura: analisi, flussi, prompt, integrazioni, voce e tono personalizzati.
+      </p>
+     </div>
+     <div class="reason-box">
+      <h3>
+       Supporto continuo
+      </h3>
+      <p>
+       Ti affianchiamo prima, durante e dopo lo sviluppo per garantirti sempre il massimo rendimento.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section-wide" id="pacchetti">
+   <h2 class="section-title">
+    Servizi &amp; Pacchetti
+   </h2>
+   <div class="grid-3">
+    <div>
+     <h3>
+      Start
+     </h3>
+     <p>
+      €599 una tantum
+      <br/>
+      €39/mese
+     </p>
+     <ul>
+      <li>
+       1 Agent AI
+      </li>
+      <li>
+       Email Agent
+      </li>
+      <li>
+       Supporto base
+      </li>
+     </ul>
+     <button onclick="showForm('Start')">
+      Scopri di più
+     </button>
+    </div>
+    <div>
+     <h3>
+      Pro
+     </h3>
+     <p>
+      €1099 una tantum
+      <br/>
+      €69/mese
+     </p>
+     <ul>
+      <li>
+       2 Agent AI
+      </li>
+      <li>
+       CRM + Email Agent
+      </li>
+      <li>
+       Supporto prioritario
+      </li>
+     </ul>
+     <button onclick="showForm('Pro')">
+      Approfondisci
+     </button>
+    </div>
+    <div>
+     <h3>
+      Business
+     </h3>
+     <p>
+      €1599 una tantum
+      <br/>
+      €99/mese
+     </p>
+     <ul>
+      <li>
+       3 Agent AI
+      </li>
+      <li>
+       Custom AI + automazioni
+      </li>
+      <li>
+       Supporto completo
+      </li>
+     </ul>
+     <button onclick="showForm('Business')">
+      Visualizza dettagli
+     </button>
+    </div>
+   </div>
+  </section>
+  <section class="section-wide light-bg" id="pacchetto-personalizzato">
+   <h2 class="section-title">
+    Richiedi il tuo Agent AI personalizzato
+   </h2>
+   <div class="grid-2">
+    <div>
+     <h3>
+      Agent AI Premium
+     </h3>
+     <p>
+      €2499 una tantum
+      <br/>
+      €149/mese
+     </p>
+     <ul>
+      <li>
+       Fino a 5 Agent AI su misura
+      </li>
+      <li>
+       Integrazioni avanzate (CRM, API, GPT, Zapier)
+      </li>
+      <li>
+       Design conversazionale personalizzato
+      </li>
+      <li>
+       Training su dati aziendali
+      </li>
+      <li>
+       Supporto VIP h24
+      </li>
+     </ul>
+     <button onclick="scrollToSection('#form-section', 800)">
+      Richiedi ora
+     </button>
+    </div>
+    <div>
+     <p>
+      Perfetto per chi cerca il massimo della personalizzazione e performance. Il nostro team crea un sistema AI su misura, completamente integrato con i tuoi strumenti digitali e ottimizzato per il tuo settore.
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="section-wide" id="form-section">
+   <h2 class="section-title">
+    Richiedi il tuo Agent AI
+   </h2>
+   <form class="contact-form">
+    <input placeholder="Nome completo" required="" type="text"/>
+    <input placeholder="Email professionale" required="" type="email"/>
+    <input id="selected-package" placeholder="Pacchetto selezionato" readonly="" type="text"/>
+    <textarea placeholder="Descrivi cosa vuoi che il tuo agent faccia (email, DM, CRM, ecc.)" required="" rows="5"></textarea>
+    <button type="submit">
+     Invia richiesta
+    </button>
+   </form>
+  </section>
+  <footer class="site-footer">
+   <p>
+    © 2025 Agent AI Studio. Tutti i diritti riservati.
+   </p>
+  </footer>
+  <script>
+   window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.getElementById("preloader").classList.add("hidden");
+  }, 600);
+});
+  </script>
+  <script>
+   function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+function scrollToSection(id, duration) {
+  const target = document.querySelector(id);
+  if (!target) return;
+  const targetPos = target.getBoundingClientRect().top + window.scrollY;
+  const startPos = window.scrollY;
+  const distance = targetPos - startPos;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easeOutCubic(timeElapsed / duration) * distance + startPos;
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+  requestAnimationFrame(animation);
+}
+  </script>
+ </body>
+</html>
