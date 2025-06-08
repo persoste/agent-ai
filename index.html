@@ -87,6 +87,9 @@
     <button onclick="scrollToSection('#pacchetti', 600)">
      Scopri i nostri servizi
     </button>
+    <button onclick="scrollToSection('#form-section', 800)">
+     Crea la tua Agent AI
+    </button>
    </div>
   </section>
   <!-- il resto del contenuto verrà attaccato subito dopo -->
@@ -188,7 +191,7 @@
       </li>
      </ul>
      <button onclick="showForm('Start')">
-      Scopri di più
+      Voglio questo
      </button>
     </div>
     <div>
@@ -212,7 +215,7 @@
       </li>
      </ul>
      <button onclick="showForm('Pro')">
-      Scopri di più
+      Voglio questo
      </button>
     </div>
     <div>
@@ -236,46 +239,24 @@
       </li>
      </ul>
      <button onclick="showForm('Business')">
-      Scopri di più
+      Voglio questo
      </button>
     </div>
    </div>
   </section>
-  <section class="section-wide light-bg" id="pacchetto-personalizzato">
+  <section class="section-wide" id="form-section">
    <h2 class="section-title">
-    Richiedi il tuo Agent AI personalizzato
+    Richiedi il tuo Agent AI
    </h2>
-   <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.06); max-width: 800px; margin: auto; text-align: center;">
-    <h3>
-     Agent AI Premium
-    </h3>
-    <p style="font-weight: bold;">
-     €2499 una tantum — €149/mese
-    </p>
-    <ul style="text-align: left; display: inline-block; margin: 1rem auto 2rem auto; padding-left: 1.2rem; list-style: disc;">
-     <li>
-      Fino a 5 Agent AI su misura
-     </li>
-     <li>
-      Integrazioni avanzate (CRM, API, GPT, Zapier)
-     </li>
-     <li>
-      Design conversazionale personalizzato
-     </li>
-     <li>
-      Training su dati aziendali
-     </li>
-     <li>
-      Supporto VIP h24
-     </li>
-    </ul>
-    <p style="margin-bottom: 2rem;">
-     Perfetto per chi cerca il massimo della personalizzazione e performance. Il nostro team crea un sistema AI su misura, completamente integrato con i tuoi strumenti digitali e ottimizzato per il tuo settore.
-    </p>
-    <a class="cta-button" href="agent-ai-personalizzato.html" style="display:inline-block;background:#000;color:#fff;padding:1rem 2rem;font-weight:bold;border-radius:0.7rem;text-decoration:none;">
-     Dettagli Offerta
-    </a>
-   </div>
+   <form class="contact-form">
+    <input placeholder="Nome completo" required="" type="text"/>
+    <input placeholder="Email professionale" required="" type="email"/>
+    <input id="selected-package" placeholder="Pacchetto selezionato" readonly="" type="text"/>
+    <textarea placeholder="Descrivi cosa vuoi che il tuo agent faccia (email, DM, CRM, ecc.)" required="" rows="5"></textarea>
+    <button type="submit">
+     Invia richiesta
+    </button>
+   </form>
   </section>
   <footer class="site-footer">
    <p>
