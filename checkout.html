@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>Checkout | Agent AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Checkout – Agent AI
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <style>
-    body {
+   body {
       font-family: sans-serif;
       background-color: #f6f3ff;
       padding: 3rem;
@@ -38,35 +40,75 @@
       background-color: #452bb7;
     }
   </style>
-</head>
-<body>
-  <div class="box">
-    <h1>Checkout</h1>
-    <p>Scegli il tipo di pagamento per attivare il tuo Agent AI personalizzato.</p>
-
-    <h3>Pagamento una tantum – 2499€</h3>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="agentai.devstudio@gmail.com">
-      <input type="hidden" name="item_name" value="Agent AI - Pacchetto completo">
-      <input type="hidden" name="amount" value="2499.00">
-      <input type="hidden" name="currency_code" value="EUR">
-      <button type="submit">Paga ora con PayPal</button>
-    </form>
-
-    <h3>Abbonamento mensile – 149€/mese</h3>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick-subscriptions">
-      <input type="hidden" name="business" value="agentai.devstudio@gmail.com">
-      <input type="hidden" name="item_name" value="Agent AI - Abbonamento Mensile">
-      <input type="hidden" name="a3" value="149.00">
-      <input type="hidden" name="p3" value="1">
-      <input type="hidden" name="t3" value="M">
-      <input type="hidden" name="src" value="1">
-      <input type="hidden" name="sra" value="1">
-      <input type="hidden" name="currency_code" value="EUR">
-      <button type="submit">Abbonati con PayPal</button>
-    </form>
+  <style>
+   body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e8d9ff 0%, #ffffff 100%);
+  padding: 4rem 1rem;
+  margin: 0;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  text-align: center;
+}
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #1d1d1f;
+}
+p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+form {
+  margin-bottom: 2rem;
+}
+button {
+  background-color: #5e3dea;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #3e2ab1;
+}
+hr {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Completa il tuo acquisto
+   </h1>
+   <p>
+    Scegli una modalità per attivare subito il tuo Agent AI Personalizzato.
+   </p>
+   <form action="#" method="post">
+    <button type="submit">
+     Paga 2499€ una tantum
+    </button>
+   </form>
+   <hr/>
+   <form action="#" method="post">
+    <button type="submit">
+     Abbonati a 149€/mese
+    </button>
+   </form>
   </div>
-</body>
+ </body>
 </html>
