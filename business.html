@@ -160,5 +160,27 @@
     <p>Prenota una call o vai direttamente al pagamento.</p>
     <a href="checkout.html">Procedi ora</a>
   </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('.hero h1', {opacity: 0, y: -50, duration: 1});
+  gsap.from('.hero p', {opacity: 0, y: 40, duration: 1, delay: 0.3});
+  gsap.utils.toArray('.card').forEach((el, i) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        toggleActions: 'play none none reset'
+      },
+      opacity: 0,
+      y: 60,
+      duration: 0.8,
+      delay: i * 0.1
+    });
+  });
+</script>
+
 </body>
 </html>
