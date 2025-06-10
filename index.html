@@ -34,27 +34,7 @@
       });
     }
   </script>
- 
-<style>
-  .icon-box {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-  }
-  .funziona-step:hover .icon-box {
-    transform: scale(1.1) rotate(2deg);
-  }
-  .funziona-step svg {
-    transition: stroke 0.3s ease;
-  }
-  .funziona-step:hover svg {
-    stroke: #3e2ab1;
-  }
-</style>
-
-</head>
+ </head>
  <body>
   <div id="preloader">
    <div class="container">
@@ -104,102 +84,87 @@
     Automazioni su misura per freelance, aziende e creator digitali
    </p>
    <div class="hero-buttons">
-    <button style="font-family: Satoshi, sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;" onclick="scrollToSection('#pacchetti', 600)">
+    <button onclick="scrollToSection('#pacchetti', 600)">
      Scopri i nostri servizi
     </button>
-    <button style="font-family: Satoshi, sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;" onclick="scrollToSection('#form-section', 800)">
+    <button onclick="scrollToSection('#form-section', 800)">
      Crea la tua Agent AI
     </button>
    </div>
   </section>
   <!-- il resto del contenuto verrà attaccato subito dopo -->
-  
-
-<section class="section-wide" id="funziona">
-  <h2 class="section-title">Come Funziona</h2>
-  <div class="grid-2">
-    <div class="card funziona-step">
-      <div class="icon-box">
-        <svg width="48" height="48" fill="none" stroke="#5e3dea" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M9 17v-2a4 4 0 014-4h6" />
-          <path d="M13 7H7a2 2 0 00-2 2v10" />
-          <circle cx="6" cy="20" r="2" />
-          <circle cx="18" cy="20" r="2" />
-        </svg>
-      </div>
-      <h4>1. Analisi Strategica</h4>
-      <p>Studiamo il tuo business, le esigenze operative e gli obiettivi per costruire una strategia di automazione personalizzata.</p>
+  <section class="section-wide" id="funziona">
+   <h2 class="section-title">
+    Come Funziona
+   </h2>
+   <div class="grid-2">
+    <div>
+     <h4>
+      1. Analisi
+     </h4>
+     <p>
+      Studiamo il tuo business e gli obiettivi.
+     </p>
     </div>
-    <div class="card funziona-step">
-      <div class="icon-box">
-        <svg width="48" height="48" fill="none" stroke="#5e3dea" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 20l9-5-9-5-9 5 9 5z" />
-          <path d="M12 12V4l9 5" />
-        </svg>
-      </div>
-      <h4>2. Progettazione Intelligente</h4>
-      <p>Definiamo i flussi, le logiche e i prompt del tuo Agent AI, integrandoli con i tuoi strumenti per ottenere il massimo risultato.</p>
+    <div>
+     <h4>
+      2. Progettazione
+     </h4>
+     <p>
+      Costruiamo l'agent AI perfetto per te.
+     </p>
     </div>
-    <div class="card funziona-step">
-      <div class="icon-box">
-        <svg width="48" height="48" fill="none" stroke="#5e3dea" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M3 7h18M3 12h18M3 17h18" />
-        </svg>
-      </div>
-      <h4>3. Integrazione Tecnica</h4>
-      <p>Colleghiamo l’agente AI a CRM, email, calendari o sistemi interni tramite API, Zapier o plugin dedicati.</p>
+    <div>
+     <h4>
+      3. Integrazione
+     </h4>
+     <p>
+      Lo colleghiamo con i tuoi tool digitali.
+     </p>
     </div>
-    <div class="card funziona-step">
-      <div class="icon-box">
-        <svg width="48" height="48" fill="none" stroke="#5e3dea" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M9 12l2 2l4 -4" />
-          <path d="M5 12a7 7 0 0114 0a7 7 0 01-14 0" />
-        </svg>
-      </div>
-      <h4>4. Supporto Continuo</h4>
-      <p>Ti accompagniamo nella gestione quotidiana dell’AI, migliorando ogni settimana performance, risposte e automazioni.</p>
+    <div>
+     <h4>
+      4. Supporto Continuo
+     </h4>
+     <p>
+      Ti assistiamo e ottimizziamo ogni mese.
+     </p>
     </div>
-  </div>
-</section>
-
-
-  
-<section class="perche-noi-section" id="perche-noi">
-  <div class="container">
-    <h2 class="section-title">Perché Scegliere Noi</h2>
+   </div>
+  </section>
+  <section class="perche-noi-section" id="perche-noi">
+   <div class="container">
+    <h2 class="section-title">
+     Perché Scegliere Noi
+    </h2>
     <div class="reasons-grid">
-      <div class="reason-box">
-        <div class="icon-box">
-          <svg width="40" height="40" fill="none" stroke="#5e3dea" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M3 12l2-2l4 4l8-8l4 4" />
-          </svg>
-        </div>
-        <h3>Esperienza comprovata</h3>
-        <p>Abbiamo realizzato decine di Agent AI per clienti in tutto il mondo, con risultati concreti e tracciabili.</p>
-      </div>
-      <div class="reason-box">
-        <div class="icon-box">
-          <svg width="40" height="40" fill="none" stroke="#5e3dea" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M10 14l2-2l2 2m-2-2v6" />
-          </svg>
-        </div>
-        <h3>Personalizzazione totale</h3>
-        <p>Ogni Agent AI è cucito su misura: analisi, flussi, prompt, integrazioni, voce e tono personalizzati.</p>
-      </div>
-      <div class="reason-box">
-        <div class="icon-box">
-          <svg width="40" height="40" fill="none" stroke="#5e3dea" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3>Supporto continuo</h3>
-        <p>Ti affianchiamo prima, durante e dopo lo sviluppo per garantirti sempre il massimo rendimento.</p>
-      </div>
+     <div class="reason-box">
+      <h3>
+       Esperienza comprovata
+      </h3>
+      <p>
+       Abbiamo realizzato decine di Agent AI per clienti in tutto il mondo, con risultati concreti e tracciabili.
+      </p>
+     </div>
+     <div class="reason-box">
+      <h3>
+       Personalizzazione totale
+      </h3>
+      <p>
+       Ogni Agent AI è cucito su misura: analisi, flussi, prompt, integrazioni, voce e tono personalizzati.
+      </p>
+     </div>
+     <div class="reason-box">
+      <h3>
+       Supporto continuo
+      </h3>
+      <p>
+       Ti affianchiamo prima, durante e dopo lo sviluppo per garantirti sempre il massimo rendimento.
+      </p>
+     </div>
     </div>
-  </div>
-</section>
-
+   </div>
+  </section>
   <section class="section-wide" id="pacchetti">
    <h2 class="section-title">
     Servizi &amp; Pacchetti
@@ -225,7 +190,7 @@
        Supporto base
       </li>
      </ul>
-     <button style="font-family: 'Satoshi', sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;" onclick="location.href='start.html'">
+     <button onclick="showForm('Start')">
       Scopri di più
      </button>
     </div>
@@ -249,7 +214,7 @@
        Supporto prioritario
       </li>
      </ul>
-     <button style="font-family: 'Satoshi', sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;" onclick="location.href='pro.html'">
+     <button onclick="showForm('Pro')">
       Scopri di più
      </button>
     </div>
@@ -273,7 +238,7 @@
        Supporto completo
       </li>
      </ul>
-     <button style="font-family: 'Satoshi', sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;" onclick="location.href='business.html'">
+     <button onclick="showForm('Business')">
       Scopri di più
      </button>
     </div>
