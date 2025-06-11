@@ -1,114 +1,80 @@
 <!DOCTYPE html>
 <html lang="it">
- <head>
+<head>
   <meta charset="utf-8"/>
-  <title>
-   Checkout – Agent AI
-  </title>
+  <title>Checkout – Agent AI</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <style>
-   body {
-      font-family: sans-serif;
-      background-color: #f6f3ff;
-      padding: 3rem;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e8d9ff 0%, #ffffff 100%);
+      padding: 4rem 1rem;
+      margin: 0;
       text-align: center;
     }
-    .box {
-      background: white;
-      border-radius: 16px;
-      max-width: 500px;
+    .container {
+      max-width: 720px;
       margin: 0 auto;
-      padding: 2rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      background: white;
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
     }
     h1 {
+      font-size: 2.2rem;
       margin-bottom: 1rem;
+      color: #1d1d1f;
     }
-    form {
-      margin: 1.5rem 0;
+    p {
+      font-size: 1.05rem;
+      color: #444;
+      margin-bottom: 2rem;
     }
-    button {
-      padding: 1rem 2rem;
-      font-size: 1rem;
+    a.button {
+      display: inline-block;
       background-color: #5e3dea;
       color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 0.9rem 2rem;
       border: none;
-      border-radius: 8px;
-      cursor: pointer;
+      border-radius: 10px;
+      text-decoration: none;
+      margin: 1rem 0;
+      transition: background 0.3s ease;
     }
-    button:hover {
-      background-color: #452bb7;
+    a.button:hover {
+      background-color: #3e2ab1;
+    }
+    hr {
+      margin: 3rem 0;
+      border: none;
+      border-top: 1px solid #ddd;
     }
   </style>
-  <style>
-   body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #e8d9ff 0%, #ffffff 100%);
-  padding: 4rem 1rem;
-  margin: 0;
-}
-.container {
-  max-width: 720px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-  text-align: center;
-}
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #1d1d1f;
-}
-p {
-  font-size: 1.05rem;
-  color: #444;
-  margin-bottom: 2rem;
-}
-form {
-  margin-bottom: 2rem;
-}
-button {
-  background-color: #5e3dea;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 0.9rem 2rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-button:hover {
-  background-color: #3e2ab1;
-}
-hr {
-  margin: 3rem 0;
-  border: none;
-  border-top: 1px solid #ddd;
-}
-  </style>
- </head>
- <body>
+</head>
+<body>
   <div class="container">
-   <h1>
-    Completa il tuo acquisto
-   </h1>
-   <p>
-    Scegli una modalità per attivare subito il tuo Agent AI Personalizzato.
-   </p>
-   <form action="#" method="post">
-    <button type="submit">
-     Paga 2499€ una tantum
-    </button>
-   </form>
-   <hr/>
-   <form action="#" method="post">
-    <button type="submit">
-     Abbonati a 149€/mese
-    </button>
-   </form>
+    <h1>Completa il tuo acquisto</h1>
+    <p>Scegli una modalità per attivare subito il tuo Agent AI.</p>
+
+    <a class="button" href="https://buy.stripe.com/test_custom_2499" target="_blank">Paga 2499€ una tantum</a><br/>
+    <a class="button" href="https://buy.stripe.com/test_custom_month_149" target="_blank">Abbonati a 149€/mese</a>
+
+    <hr>
+
+    <a class="button" href="https://buy.stripe.com/test_start_599" target="_blank">Start – 599€ una tantum</a><br/>
+    <a class="button" href="https://buy.stripe.com/test_start_month_39" target="_blank">Start – 39€/mese</a>
+
+    <hr>
+
+    <a class="button" href="https://buy.stripe.com/test_pro_1099" target="_blank">Pro – 1099€ una tantum</a><br/>
+    <a class="button" href="https://buy.stripe.com/test_pro_month_69" target="_blank">Pro – 69€/mese</a>
+
+    <hr>
+
+    <a class="button" href="https://buy.stripe.com/test_business_1599" target="_blank">Business – 1599€ una tantum</a><br/>
+    <a class="button" href="https://buy.stripe.com/test_business_month_99" target="_blank">Business – 99€/mese</a>
   </div>
- </body>
+</body>
 </html>
