@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Agent AI Studio | Automazioni Intelligenti per Freelance e Aziende
+  </title>
+<meta content="Scopri Agent AI Studio: agenti AI personalizzati per automatizzare il tuo business. Soluzioni su misura per freelance, aziende e creator digitali." name="description"/>
+<meta content="agent AI, automazioni AI, AI per aziende, AI per freelance, AI su misura, agenti virtuali, CRM AI, Email AI" name="keywords"/>
+<meta content="Agent AI Studio" name="author"/>
+<meta content="Agent AI Studio | Automazioni Intelligenti" property="og:title"/>
+<meta content="Agenti AI su misura per aziende e professionisti. Scopri pacchetti personalizzati, demo e supporto continuo." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://agentai.studio" property="og:url"/>
+<meta content="https://agentai.studio/preview.png" property="og:image"/>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&amp;f[]=satoshi@400&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script>
+   function scrollToSection(id, speed) {
+      const target = document.querySelector(id);
+      if (!target) return;
+      const position = target.getBoundingClientRect().top + window.scrollY;
+      let start = null;
+      window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const easing = progress < speed ? progress / speed : 1 + 1.5 * (progress - speed) / 200;
+        const scrollTo = Math.min(window.scrollY + easing * 15, position);
+        window.scrollTo(0, scrollTo);
+        if (scrollTo < position) {
+          window.requestAnimationFrame(step);
+        }
+      });
+    }
+  </script>
+<style>
+   .icon-box {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .funziona-step:hover .icon-box {
+    transform: scale(1.1) rotate(2deg);
+  }
+  .funziona-step svg {
+    transition: stroke 0.3s ease;
+  }
+  .funziona-step:hover svg {
+    stroke: #3e2ab1;
+  }
+  </style>
+</head>
+<body>
+<div id="preloader">
+<div class="container">
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+<div class="dot">
+</div>
+</div>
+</div>
+<section class="hero-full" id="hero">
+<h1 class="hero-title">
+    Potenzia il tuo business
+    <br/>
+<strong>
+     con gli Agent AI
+    </strong>
+</h1>
+<p class="hero-subtitle">
+    Automazioni su misura per freelance, aziende e creator digitali
+   </p>
+<div class="hero-buttons">
+<button onclick="scrollToSection('#pacchetti', 600)" style="font-family: Satoshi, sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;">
+     Scopri i nostri servizi
+    </button>
+<button onclick="scrollToSection('#form-section', 800)" style="font-family: Satoshi, sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;">
+     Crea la tua Agent AI
+    </button>
+</div>
+</section>
+<!-- il resto del contenuto verrà attaccato subito dopo -->
+<section class="section-wide" id="funziona">
+<h2 class="section-title">
+    Come Funziona
+   </h2>
+<div class="grid-2">
+<div class="card funziona-step">
+<div class="icon-box">
+<svg fill="none" height="48" stroke="#5e3dea" stroke-width="2" viewbox="0 0 24 24" width="48">
+<path d="M9 17v-2a4 4 0 014-4h6">
+</path>
+<path d="M13 7H7a2 2 0 00-2 2v10">
+</path>
+<circle cx="6" cy="20" r="2">
+</circle>
+<circle cx="18" cy="20" r="2">
+</circle>
+</svg>
+</div>
+<h4>
+      1. Analisi Strategica
+     </h4>
+<p>
+      Studiamo il tuo business, le esigenze operative e gli obiettivi per costruire una strategia di automazione personalizzata.
+     </p>
+</div>
+<div class="card funziona-step">
+<div class="icon-box">
+<svg fill="none" height="48" stroke="#5e3dea" stroke-width="2" viewbox="0 0 24 24" width="48">
+<path d="M12 20l9-5-9-5-9 5 9 5z">
+</path>
+<path d="M12 12V4l9 5">
+</path>
+</svg>
+</div>
+<h4>
+      2. Progettazione Intelligente
+     </h4>
+<p>
+      Definiamo i flussi, le logiche e i prompt del tuo Agent AI, integrandoli con i tuoi strumenti per ottenere il massimo risultato.
+     </p>
+</div>
+<div class="card funziona-step">
+<div class="icon-box">
+<svg fill="none" height="48" stroke="#5e3dea" stroke-width="2" viewbox="0 0 24 24" width="48">
+<path d="M3 7h18M3 12h18M3 17h18">
+</path>
+</svg>
+</div>
+<h4>
+      3. Integrazione Tecnica
+     </h4>
+<p>
+      Colleghiamo l’agente AI a CRM, email, calendari o sistemi interni tramite API, Zapier o plugin dedicati.
+     </p>
+</div>
+<div class="card funziona-step">
+<div class="icon-box">
+<svg fill="none" height="48" stroke="#5e3dea" stroke-width="2" viewbox="0 0 24 24" width="48">
+<path d="M9 12l2 2l4 -4">
+</path>
+<path d="M5 12a7 7 0 0114 0a7 7 0 01-14 0">
+</path>
+</svg>
+</div>
+<h4>
+      4. Supporto Continuo
+     </h4>
+<p>
+      Ti accompagniamo nella gestione quotidiana dell’AI, migliorando ogni settimana performance, risposte e automazioni.
+     </p>
+</div>
+</div>
+</section>
+<section class="perche-noi-section" id="perche-noi">
+<div class="container">
+<h2 class="section-title">
+     Perché Scegliere Noi
+    </h2>
+<div class="reasons-grid">
+<div class="reason-box">
+<div class="icon-box">
+<svg fill="none" height="40" stroke="#5e3dea" stroke-width="2" viewbox="0 0 24 24" width="40">
+<path d="M3 12l2-2l4 4l8-8l4 4">
+</path>
+</svg>
+</div>
+<h3>
+       Esperienza comprovata
+      </h3>
+<p>
+       Abbiamo realizzato decine di Agent AI per clienti in tutto il mondo, con risultati concreti e tracciabili.
+      </p>
+</div>
+<div class="reason-box">
+<div class="icon-box">
+<svg fill="none" height="40" stroke="#5e3dea" stroke-width="2" viewbox="0 0 24 24" width="40">
+<circle cx="12" cy="12" r="10">
+</circle>
+<path d="M10 14l2-2l2 2m-2-2v6">
+</path>
+</svg>
+</div>
+<h3>
+       Personalizzazione totale
+      </h3>
+<p>
+       Ogni Agent AI è cucito su misura: analisi, flussi, prompt, integrazioni, voce e tono personalizzati.
+      </p>
+</div>
+<div class="reason-box">
+<div class="icon-box">
+<svg fill="none" height="40" stroke="#5e3dea" stroke-width="2" viewbox="0 0 24 24" width="40">
+<path d="M5 13l4 4L19 7">
+</path>
+</svg>
+</div>
+<h3>
+       Supporto continuo
+      </h3>
+<p>
+       Ti affianchiamo prima, durante e dopo lo sviluppo per garantirti sempre il massimo rendimento.
+      </p>
+</div>
+</div>
+</div>
+</section>
+<section class="section-wide" id="pacchetti">
+<h2 class="section-title">
+    Servizi &amp; Pacchetti
+   </h2>
+<div class="grid-3">
+<div>
+<h3>
+      Start
+     </h3>
+<p>€1.199 una tantum<br/>€149/mese</p>
+<ul><li>1 Agent AI</li><li>Email automatizzata</li><li>Supporto base</li></ul>
+<button onclick="location.href='start.html'" style="font-family: 'Satoshi', sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;">
+      Scopri di più
+     </button>
+</div>
+<div>
+<h3>
+      Pro
+     </h3>
+<p>€2.499 una tantum<br/>€199/mese</p>
+<ul><li>1 Agent AI</li><li>Integrazione CRM</li><li>Supporto prioritario</li></ul>
+<button onclick="location.href='pro.html'" style="font-family: 'Satoshi', sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;">
+      Scopri di più
+     </button>
+</div>
+<div>
+<h3>
+      Business
+     </h3>
+<p>€3.999 una tantum<br/>€299/mese</p>
+<ul><li>1 Agent AI</li><li>Automazioni avanzate</li><li>Supporto completo</li></ul>
+<button onclick="location.href='business.html'" style="font-family: 'Satoshi', sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;">
+      Scopri di più
+     </button>
+</div>
+</div>
+</section>
+<section class="section-wide light-bg" id="form-section">
+<h2 style="text-align: center; font-size: 2.2rem; font-weight: bold; margin-bottom: 2rem;">
+    Richiedi il tuo Agent AI Personalizzato
+   </h2>
+<div style="max-width: 800px; margin: 0 auto; padding: 2.5rem; background: #ffffff; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; gap: 1.5rem;">
+<h3>
+     ✅ Pacchetto completo di agenti AI su misura
+    </h3>
+<ul>
+<li>
+      5 agent AI ottimizzati per email, vendite, supporto, CRM e altro
+     </li>
+<li>
+      Integrazione diretta con Zapier, API, GPT e strumenti business
+     </li>
+<li>
+      Voce e tono personalizzati per il tuo brand
+     </li>
+<li>
+      Supporto VIP 24/7 + aggiornamenti settimanali
+     </li>
+</ul>
+<p style="font-size: 1.3rem; font-weight: bold;">€5.499 una tantum + €399/mese</p>
+<a href="agent-ai-personalizzato-pro.html" style="background: black; color: white; padding: 0.9rem 1.5rem; border-radius: 10px; font-weight: bold; width: fit-content; text-decoration: none;">
+     Scopri di più
+    </a>
+</div>
+</section>
+<footer class="site-footer">
+<p>
+    © 2025 Agent AI Studio. Tutti i diritti riservati.
+   </p>
+</footer>
+<script>
+   window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.getElementById("preloader").classList.add("hidden");
+  }, 600);
+});
+  </script>
+<script>
+   function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+function scrollToSection(id, duration) {
+  const target = document.querySelector(id);
+  if (!target) return;
+  const targetPos = target.getBoundingClientRect().top + window.scrollY;
+  const startPos = window.scrollY;
+  const distance = targetPos - startPos;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easeOutCubic(timeElapsed / duration) * distance + startPos;
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+  requestAnimationFrame(animation);
+}
+  </script>
+</body>
+</html>
