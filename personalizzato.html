@@ -145,7 +145,13 @@
     </div>
    </div>
    <p class="price">
-    €5.499 una tantum<br/>💳 €399/mese
+    <strong>
+     €2499
+    </strong>
+    una tantum —
+    <strong>
+     €399
+    </strong>
    </p>
   </section>
   <section class="section">
@@ -233,29 +239,5 @@
     });
   });
   </script>
- 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.utils.toArray('.card').forEach((card, i) => {
-    gsap.set(card, { opacity: 0, y: 60, willChange: 'transform' });
-
-    gsap.to(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 80%',
-        toggleActions: 'play none none reset'
-      },
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      ease: 'power2.out',
-      delay: i * 0.05
-    });
-  });
-</script>
-
-</body>
+ </body>
 </html>
