@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://agentai.studio/</loc>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://agentai.studio/#pacchetti</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://agentai.studio/#demo</loc>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://agentai.studio/#form-section</loc>
-<priority>0.64</priority>
-</url>
-<url><loc>https://agentai.studio/form-agent.html</loc></url></urlset>
+  <url>
+    <loc>https://agentai.studio/</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://agentai.studio/#pacchetti</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://agentai.studio/#demo</loc>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://agentai.studio/#form-section</loc>
+    <priority>0.64</priority>
+  </url>
+</urlset>
