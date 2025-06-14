@@ -11,7 +11,7 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #e8d9ff 0%, #f9f8ff 100%);
+      background: linear-gradient(135deg, #e8d9ff, #d0c1ec);
       color: #111;
       padding: 3rem 1rem;
     }
@@ -22,6 +22,11 @@
       margin-bottom: 2rem;
     }
     form {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       max-width: 900px;
       margin: auto;
       background: white;

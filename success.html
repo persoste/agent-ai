@@ -1,89 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Richiesta Inviata | Agent AI Studio</title>
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Grazie per l'acquisto – Agent AI Studio
+  </title>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&amp;f[]=satoshi@400&amp;display=swap" rel="stylesheet"/>
   <style>
-    body {
+   body {
       margin: 0;
-      background: linear-gradient(135deg, #e8d9ff, #ffffff);
-      font-family: 'Inter', sans-serif;
+      font-family: 'Satoshi', sans-serif;
+      background: linear-gradient(120deg, #E8D9FF, #f5f2ff);
       color: #111;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      height: 100vh;
       text-align: center;
       padding: 2rem;
     }
-    .checkmark {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: #5e3dea;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
-      animation: pop 0.4s ease-out forwards;
-    }
-    .checkmark svg {
-      width: 60px;
-      height: 60px;
-      stroke: white;
-      stroke-width: 4;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-dasharray: 48;
-      stroke-dashoffset: 48;
-      animation: draw 1s ease forwards;
-    }
-    @keyframes draw {
-      to { stroke-dashoffset: 0; }
-    }
-    @keyframes pop {
-      0% { transform: scale(0.5); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
     h1 {
       font-family: 'Clash Display', sans-serif;
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
+      color: #1d1d1f;
     }
     p {
       font-size: 1.2rem;
+      max-width: 700px;
       margin-bottom: 2rem;
     }
-    a {
+    a.button {
       background: #5e3dea;
       color: white;
-      text-decoration: none;
       padding: 1rem 2rem;
-      border-radius: 0.8rem;
+      border-radius: 0.7rem;
       font-weight: bold;
-      font-size: 1rem;
-      font-family: 'Clash Display', sans-serif;
-      transition: background 0.3s ease;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
-    a:hover {
+    a.button:hover {
       background: #3e2ab1;
+      transform: scale(1.05);
     }
   </style>
-</head>
-<body>
-  <div class="checkmark">
-    <svg viewBox="0 0 24 24">
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
-  </div>
-  <h1>Richiesta Inviata</h1>
-  <p>Grazie per averci contattato. Ti risponderemo il prima possibile.</p>
-  <a href="index.html">Torna alla Home</a>
-</body>
+ </head>
+ <body>
+  <h1>
+   Pagamento riuscito ✅
+  </h1>
+  <p>
+   Grazie per aver scelto Agent AI Studio.
+   <br/>
+   Il tuo agente AI è in fase di configurazione.
+   <br/>
+   Riceverai un'email entro 24 ore con tutti i dettagli.
+  </p>
+  <a class="button" href="index.html">
+   Torna alla Home
+  </a>
+ </body>
 </html>
