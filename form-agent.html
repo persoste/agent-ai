@@ -137,5 +137,37 @@
   <button type="submit">Invia richiesta</button>
 </form>
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const inputs = form.querySelectorAll("input, textarea, select");
+
+    inputs.forEach((el) => {
+      el.addEventListener("input", () => {
+        if (el.checkValidity()) {
+          el.style.borderColor = "#4CAF50";
+        } else {
+          el.style.borderColor = "#f44336";
+        }
+      });
+    });
+
+    form.addEventListener("submit", function (e) {
+      let valid = true;
+      inputs.forEach((el) => {
+        if (!el.checkValidity()) {
+          el.style.borderColor = "#f44336";
+          valid = false;
+        }
+      });
+      if (!valid) {
+        e.preventDefault();
+        alert("Per favore compila correttamente tutti i campi obbligatori.");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
