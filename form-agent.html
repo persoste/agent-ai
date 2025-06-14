@@ -77,13 +77,28 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
-  </style>
+  
+    label.active {
+      transform: translateY(-1.8rem);
+      font-size: 0.95rem;
+      color: #5e3dea;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #5e3dea;
+      box-shadow: 0 0 0 3px rgba(94, 61, 234, 0.2);
+    }
+    label {
+      transition: all 0.25s ease;
+    }
+    </style>
+    
 </head>
 <body>
 
 <h1 id="title">Richiedi il tuo Agent AI Personalizzato</h1>
 
-<form id="aiForm">
+<form id="aiForm" id="aiForm">
   <label for="name">Nome e Cognome</label>
   <input type="text" id="name" required />
 
@@ -155,6 +170,23 @@ gsap.from(split.chars, {
     );
   });
     
+  });
+</script>
+
+
+<script>
+  document.querySelectorAll("input, textarea, select").forEach(el => {
+    el.addEventListener("focus", () => {
+      el.previousElementSibling?.classList.add("active");
+    });
+    el.addEventListener("blur", () => {
+      if (!el.value) el.previousElementSibling?.classList.remove("active");
+    });
+  });
+
+  document.getElementById("aiForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    window.location.href = "success.html";
   });
 </script>
 
