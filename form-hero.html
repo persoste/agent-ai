@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Richiedi il tuo Agent AI | Agent AI Studio</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #e8d9ff 0%, #f9f8ff 100%);
+      color: #111;
+      padding: 3rem 1rem;
+    }
+    h1 {
+      font-family: 'Clash Display', sans-serif;
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    form {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
+    }
+    label {
+      display: block;
+      font-family: 'Clash Display', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 0.8rem;
+      border: 1px solid #ccc;
+      background: #fdfdfd;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #5e3dea;
+      box-shadow: 0 0 0 2px #e8d9ff;
+      background: #fff;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1.1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: #5e3dea;
+      color: white;
+      border: none;
+      border-radius: 0.9rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      font-family: 'Clash Display', sans-serif;
+    }
+    button:hover {
+      background: #3e2ab1;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+<h1 id="title">Richiedi il tuo Agent AI Personalizzato</h1>
+
+<form id="aiForm">
+  <label for="name">Nome e Cognome</label>
+  <input type="text" id="name" required />
+
+  <label for="email">Email di contatto</label>
+  <input type="email" id="email" required />
+
+  <label for="ai-type">Tipo di AI desiderata</label>
+  <select id="ai-type" required>
+    <option value="">-- Seleziona --</option>
+    <option>Email Automation</option>
+    <option>CRM Assistant</option>
+    <option>Supporto Clienti</option>
+    <option>Vendite</option>
+    <option>Social Media Manager</option>
+    <option>Altro</option>
+  </select>
+
+  <label for="desc">Descrizione personalizzata (opzionale)</label>
+  <textarea id="desc" placeholder="Es: Voglio un agent AI che risponda su WhatsApp e invii log su Notion."></textarea>
+
+  <label for="tone">Voce e tono preferito</label>
+  <select id="tone">
+    <option value="">-- Seleziona --</option>
+    <option>Professionale</option>
+    <option>Empatico</option>
+    <option>Creativo</option>
+    <option>Divertente</option>
+    <option>Neutro</option>
+  </select>
+
+  <label for="tools">Strumenti o integrazioni da collegare</label>
+  <textarea id="tools" placeholder="Es: Zapier, Google Calendar, Notion, Stripe..."></textarea>
+
+  <label for="other">Altro da comunicarci?</label>
+  <textarea id="other" placeholder="Scrivi qui qualsiasi dettaglio extra."></textarea>
+
+  <button type="submit">Invia richiesta</button>
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  gsap.from("#title", {opacity: 0, y: -40, duration: 1, ease: "power4.out"});
+  
+  gsap.utils.toArray("form label, form input, form select, form textarea, form button").forEach((el, i) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.2 + i * 0.08,
+        duration: 0.6,
+        ease: "power2.out",
+        clearProps: "opacity,transform"
+      }
+    );
+  });
+    
+  });
+</script>
+
+</body>
+</html>
