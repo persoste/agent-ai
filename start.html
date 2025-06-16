@@ -153,28 +153,45 @@
       1 Agent AI
      </h4>
 <p>
-      Un agente AI ottimizzato per email o supporto.
+      Scegli l’agente più adatto tra quelli disponibili: email, supporto clienti, social o CRM. Ogni versione è studiata per semplificare la tua giornata lavorativa e farti risparmiare tempo prezioso.
      </p>
 </div>
-<div class="card">
-<h4>
-      Email Agent
-     </h4>
-<p>
-      Gestione automatica delle email, risposte smart e filtri personalizzati.
-     </p>
+
+<div class="card-dinamica" style="background:white; padding:2rem; border-radius:1rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); text-align:center;">
+  <select id="agentSelect" onchange="updateCardContent()" style="margin-bottom: 1rem; padding: 0.6rem 1rem; font-size: 1rem; border-radius: 0.6rem; border: 1px solid #ccc;">
+    <option value="email">📧 Email Agent</option>
+    <option value="support">🤖 Supporto Clienti</option>
+    <option value="social">📆 Social Planner</option>
+    <option value="crm">📊 Mini CRM Assistant</option>
+    <option value="notion">🧠 Notion Organizer</option>
+    <option value="shopify">🛒 Shopify Helper</option>
+  </select>
+  
+  
+<div id="lottie-icons">
+  <lottie-player id="icon-email" src="https://assets7.lottiefiles.com/packages/lf20_49rdyysj.json" background="transparent" speed="1" loop autoplay style="width: 120px; height: 120px; margin: 0 auto 1rem; display: block;"></lottie-player>
+  <lottie-player id="icon-support" src="https://assets2.lottiefiles.com/packages/lf20_qp1q7mct.json" background="transparent" speed="1" loop autoplay style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player>
+  <lottie-player id="icon-social" src="https://assets2.lottiefiles.com/packages/lf20_w51pcehl.json" background="transparent" speed="1" loop autoplay style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player>
+  <lottie-player id="icon-crm" src="https://assets4.lottiefiles.com/packages/lf20_yzoqyyqf.json" background="transparent" speed="1" loop autoplay style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player>
+  <lottie-player id="icon-notion" src="https://assets5.lottiefiles.com/packages/lf20_kdx6cani.json" background="transparent" speed="1" loop autoplay style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player>
+  <lottie-player id="icon-shopify" src="https://assets6.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player>
 </div>
+
+<h4 id="agentTitle">Email Agent</h4>
+  <p id="agentDesc">Gestione automatica delle email, risposte smart e filtri personalizzati.</p>
+</div>
+
 <div class="card">
 <h4>
       Supporto base
      </h4>
 <p>
-      Supporto via email e aggiornamenti mensili inclusi.
+      Assistenza diretta via email entro 48h, consigli su come migliorare l’uso dell’agente, più un recap mensile dei miglioramenti suggeriti per aumentare l’efficienza del tuo business.
      </p>
 </div>
 </div>
 <p class="price">
-    €1.199
+    €1.199 + 💳 €149/mese
    </p>
 </section>
 <section class="section">
@@ -233,5 +250,61 @@
     });
   });
   </script>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script>
+  const data = {
+    email: {
+      title: "Email Agent",
+      desc: "Gestione automatica delle email, risposte smart e filtri personalizzati."
+    },
+    support: {
+      title: "Supporto Clienti",
+      desc: "FAQ automatiche, gestione richieste comuni e risposte AI in tempo reale."
+    },
+    social: {
+      title: "Social Planner",
+      desc: "Pianifica post, crea contenuti e pubblica su Instagram, LinkedIn, TikTok e altro."
+    },
+    crm: {
+      title: "Mini CRM Assistant",
+      desc: "Organizza lead, aggiorna contatti, invia offerte e gestisce i funnel base."
+    },
+    notion: {
+      title: "Notion Organizer",
+      desc: "Automatizza e riordina pagine e task su Notion con reminder intelligenti."
+    },
+    shopify: {
+      title: "Shopify Helper",
+      desc: "Gestisce FAQ prodotto, assistenza post-vendita e risposte automatiche clienti."
+    }
+  };
+
+  function updateCardContent() {
+    const selected = document.getElementById("agentSelect").value;
+    const title = document.getElementById("agentTitle");
+    const desc = document.getElementById("agentDesc");
+
+    // Hide all players
+    document.querySelectorAll("#lottie-icons lottie-player").forEach(p => p.style.display = "none");
+
+    // Show selected player
+    const active = document.getElementById("icon-" + selected);
+    if (active) active.style.display = "block";
+
+    // Update text
+    title.textContent = data[selected].title;
+    desc.style.opacity = 0;
+    setTimeout(() => {
+      desc.textContent = data[selected].desc;
+      desc.style.opacity = 1;
+    }, 200);
+  }
+</script>
+
 </body>
 </html>
