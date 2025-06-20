@@ -122,7 +122,7 @@
     });
   </script>
 </head>
-<body>
+<body><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <div id="preloader">
 <div style="display:flex">
 <div class="dot">
@@ -146,59 +146,14 @@
 <section class="section">
 <h2>
     Cosa include
-   </h2>
-<div class="grid">
-<div class="card">
-<h4>
-      1 Agent AI
-     </h4>
-<p>
-      Email + CRM agent per gestire contatti e relazioni.
-     </p>
-</div>
-<div class="card">
-<h4>
-      Integrazione CRM
-     </h4>
-<p>
-      Automatizza funnel, lead e risposte follow-up.
-     </p>
-</div>
-<div class="card">
-<h4>
-      Supporto prioritario
-     </h4>
-<p>
-      Risposta entro 24h e call mensile dedicata.
-     </p>
-</div>
-</div>
-<p class="price">
-    €2.499
-   </p>
-</section>
+   </h2><p style="font-weight: bold; text-align: center; max-width: 800px; margin: 0 auto 2rem;">Scegli l’agente AI più adatto: ogni versione è pensata per semplificare i tuoi processi aziendali e aumentare l'efficienza.</p>
+<div class="grid"><div class="card"><h4>1 Agent AI professionale incluso</h4><p>Scegli tra 5 agenti pronti: contenuti, email persuasive, video script o landing page.</p></div><div class="card"><h4>Setup personalizzato su misura</h4><p>Configuriamo l’agente AI ideale per te: stile, nicchia, obiettivi. Tutto su misura.</p></div><div class="card"><h4>Supporto prioritario</h4><p>Hai un canale diretto con il nostro team: risposta garantita entro 24h e 1 call al mese per ottimizzare l’uso del tuo agente AI.</p></div></div><div style="margin-bottom: 2rem;"></div>
+<div class="card-dinamica" style="background:white; padding:2rem; border-radius:1rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); text-align:center;"><select id="agentSelect" onchange="updateCardContent()" style="margin-bottom: 1rem; padding: 0.6rem 1rem; font-size: 1rem; border-radius: 0.6rem; border: 1px solid #ccc;"><option value="seo">📝 AI Content Writer (SEO + Blog)</option><option value="tiktok">🎯 TikTok Script Generator</option><option value="lead">📩 Lead Magnet Generator</option><option value="coldemail">📬 Cold Email Machine</option><option value="landing">🌐 Landing Page Text AI</option></select><div id="lottie-icons" style="margin-bottom: 2rem;"><lottie-player autoplay="" background="transparent" id="icon-seo" loop="" speed="1" src="https://assets3.lottiefiles.com/packages/lf20_vnikrcia.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: block;"></lottie-player><lottie-player autoplay="" background="transparent" id="icon-tiktok" loop="" speed="1" src="https://assets2.lottiefiles.com/packages/lf20_bhw1ul4g.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player><lottie-player autoplay="" background="transparent" id="icon-lead" loop="" speed="1" src="https://assets9.lottiefiles.com/packages/lf20_w51pcehl.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player><lottie-player autoplay="" background="transparent" id="icon-coldemail" loop="" speed="1" src="https://assets1.lottiefiles.com/private_files/lf30_m6j5igxb.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player><lottie-player autoplay="" background="transparent" id="icon-landing" loop="" speed="1" src="https://assets2.lottiefiles.com/packages/lf20_gjmecwii.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none;"></lottie-player></div><h4 id="agentTitle">AI Content Writer (SEO + Blog)</h4><p id="agentDesc">Scrive articoli ottimizzati per Google basati sul tuo settore.</p></div><p class="price">€2.499 + 💳 €199/mese</p></section>
 <section class="section">
 <h2>
     Casi d'Uso Reali
    </h2>
-<div class="grid">
-<div class="card">
-<h4>
-      Digital marketer
-     </h4>
-<p>
-      CRM agent gestisce contatti e manda offerte in automatico.
-     </p>
-</div>
-<div class="card">
-<h4>
-      Venditore freelance
-     </h4>
-<p>
-      Gestione trattative via email con risposta AI rapida.
-     </p>
-</div>
-</div>
+<div class="grid"><div class="card"><h4>Imprenditore digitale</h4><p>Scrive articoli SEO e newsletter automatizzate con l’AI, generando traffico costante senza dipendere da copywriter.</p></div><div class="card"><h4>Content Creator su TikTok</h4><p>Riceve ogni giorno uno script AI ottimizzato per creare contenuti virali in pochi minuti e aumentare le visualizzazioni.</p></div><div class="card"><h4>Venditore online</h4><p>Usa l’AI per generare testi persuasivi per le sue landing page, migliorando conversioni e riducendo tempi di lancio.</p></div></div>
 </section>
 <section class="footer-cta">
 <h2>
@@ -233,5 +188,39 @@
     });
   });
   </script>
-</body>
+<script>
+    const data = {
+    "seo": { title: "AI Content Writer (SEO + Blog)", desc: "Scrive articoli ottimizzati per Google basati sul tuo settore." },
+"tiktok": { title: "TikTok Script Generator", desc: "Genera script TikTok con hook, CTA e storytelling efficace." },
+"lead": { title: "Lead Magnet Generator", desc: "Crea eBook o PDF utili per generare nuovi contatti email." },
+"coldemail": { title: "Cold Email Machine", desc: "Scrive email commerciali persuasive e testabili A/B." },
+"landing": { title: "Landing Page Text AI", desc: "Scrive testi professionali per ogni sezione di una landing page." }
+    };
+
+    function updateCardContent() {
+      const selected = document.getElementById("agentSelect").value;
+      const title = document.getElementById("agentTitle");
+      const desc = document.getElementById("agentDesc");
+
+      document.querySelectorAll("#lottie-icons lottie-player").forEach(p => p.style.display = "none");
+      const active = document.getElementById("icon-" + selected);
+      if (active) {
+        active.style.display = "block";
+        active.style.opacity = 0;
+        active.style.transform = "scale(0.8)";
+        setTimeout(() => {
+          active.style.transition = "all 0.4s ease";
+          active.style.opacity = 1;
+          active.style.transform = "scale(1)";
+        }, 10);
+      }
+
+      title.textContent = data[selected].title;
+      desc.style.opacity = 0;
+      setTimeout(() => {
+        desc.textContent = data[selected].desc;
+        desc.style.opacity = 1;
+      }, 200);
+    }
+    </script></body>
 </html>
