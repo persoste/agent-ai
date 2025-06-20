@@ -113,7 +113,94 @@
   background-color: #d5c2f7;
 }
 </style>
-</head>
+<style>
+body {
+  font-family: 'Satoshi', sans-serif;
+  background: linear-gradient(to bottom right, #ffffff, #f0ecff);
+  margin: 0;
+  padding: 2rem;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #b083f5;
+  outline: none;
+}
+
+button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.9rem 2rem;
+  background-color: #e8d9ff;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4baf0;
+}
+
+#success-message {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: green;
+  margin-top: 2rem;
+}
+
+#back-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  background-color: #e8d9ff;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#back-home:hover {
+  background-color: #d0b8f0;
+}
+</style></head>
 <body><a href="index.html" id="back-home">← Torna alla Home</a>
 <style>
   .floating-bg {
