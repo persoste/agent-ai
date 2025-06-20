@@ -277,27 +277,30 @@ gsap.from(split.chars, {
     });
   });
 
-  const formElement = document.getElementById("aiForm");
+  document.getElementById("aiForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    window.location.href = "success.html";
+  });
+</script>
+<script>
+  const form = document.getElementById("aiForm");
   const thanks = document.getElementById("thanks-message");
 
-  formElement.addEventListener("submit", function(e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const data = new FormData(formElement);
-    fetch(formElement.action, {
+    const data = new FormData(form);
+    fetch(form.action, {
       method: "POST",
       body: data,
-      headers: {
-        Accept: "application/json"
-      }
+      headers: { Accept: "application/json" }
     }).then(response => {
       if (response.ok) {
-        formElement.style.display = "none";
+        form.style.display = "none";
         thanks.style.display = "block";
       } else {
         alert("Errore nell'invio. Riprova.");
       }
     });
   });
-</script>
-</body>
+</script></body>
 </html>
