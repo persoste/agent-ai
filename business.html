@@ -121,8 +121,13 @@
       }, 600);
     });
   </script>
-</head>
-<body>
+<style>
+  a:hover {
+    background-color: #4a2fcf !important;
+    transform: scale(1.03);
+  }
+</style></head>
+<body><div style="position: fixed; top: 20px; right: 20px; z-index: 9999;"><a href="index.html" style="font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 0.95rem; color: white; background-color: #5e3dea; padding: 0.6rem 1.4rem; border-radius: 0.5rem; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: all 0.3s ease-in-out;">← Torna alla Home</a></div><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <div id="preloader">
 <div style="display:flex">
 <div class="dot">
@@ -146,59 +151,27 @@
 <section class="section">
 <h2>
     Cosa include
-   </h2>
+   </h2><p style="font-weight: bold; text-align: center; max-width: 800px; margin: 0 auto 2rem;">Scegli l’agente AI più adatto: ogni versione è pensata per semplificare i tuoi processi aziendali e aumentare l'efficienza.</p>
 <div class="grid">
 <div class="card">
-<h4>
-      1 Agent AI
-     </h4>
-<p>
-      Email, CRM e automazioni avanzate integrate.
-     </p>
+<h4>Vendite &amp; Clienti AI Assistant</h4>
+<p>Automatizza risposte ai clienti, script commerciali, email post-vendita e testi per landing page. Perfetto per aumentare conversioni e fidelizzazione in modo autonomo.</p>
 </div>
 <div class="card">
-<h4>
-      Automazioni custom
-     </h4>
-<p>
-      Flussi su misura con API, Zapier e GPT.
-     </p>
+<h4>Onboarding tecnico + strategico avanzato</h4>
+<p>Setup completo con consulente, analisi obiettivi, e implementazione ottimizzata.</p>
 </div>
 <div class="card">
-<h4>
-      Supporto completo
-     </h4>
-<p>
-      Supporto via chat, email e analisi settimanale.
-     </p>
+<h4>Supporto dedicato e continuo</h4>
+<p>Risposte in 12h, 2 call mensili, canale Telegram diretto, e ottimizzazione costante degli Agent AI.</p>
 </div>
-</div>
-<p class="price">
-    €3.999
-   </p>
-</section>
+</div><div style="margin-bottom: 2.5rem;"></div>
+<div class="card-dinamica" style="background:white; padding:2rem; border-radius:1rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); text-align:center;"><select id="agentSelect" onchange="updateCardContent()" style="margin-bottom: 1rem; padding: 0.6rem 1rem; font-size: 1rem; border-radius: 0.6rem; border: 1px solid #ccc;"><option value="sales">🤝 Sales Closer AI</option><option value="ads">📢 Ads Optimizer AI</option><option value="support">💬 Customer Support AI</option><option value="upsell">🛒 Ecommerce Upsell AI</option><option value="video">🎬 TikTok Auto-Producer</option></select><div id="lottie-icons" style="margin-bottom: 2rem;"><lottie-player autoplay="" background="transparent" id="icon-sales" loop="" speed="1" src="https://assets4.lottiefiles.com/packages/lf20_gjmecwii.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: block"></lottie-player><lottie-player autoplay="" background="transparent" id="icon-ads" loop="" speed="1" src="https://assets10.lottiefiles.com/packages/lf20_myejiggj.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none"></lottie-player><lottie-player autoplay="" background="transparent" id="icon-support" loop="" speed="1" src="https://assets1.lottiefiles.com/packages/lf20_rwq6ciql.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none"></lottie-player><lottie-player autoplay="" background="transparent" id="icon-upsell" loop="" speed="1" src="https://assets4.lottiefiles.com/packages/lf20_YXD37q.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none"></lottie-player><lottie-player autoplay="" background="transparent" id="icon-video" loop="" speed="1" src="https://assets6.lottiefiles.com/packages/lf20_4kx2q32n.json" style="width: 120px; height: 120px; margin: 0 auto 1rem; display: none"></lottie-player></div><h4 id="agentTitle">Sales Closer AI</h4><p id="agentDesc">Simula una chat di vendita per convincere e chiudere clienti.</p></div><p class="price">€3.999 + 💳 €299/mese</p></section>
 <section class="section">
 <h2>
     Casi d'Uso Reali
    </h2>
-<div class="grid">
-<div class="card">
-<h4>
-      Agenzia creativa
-     </h4>
-<p>
-      AI gestisce briefing, mail clienti e scadenze.
-     </p>
-</div>
-<div class="card">
-<h4>
-      Team commerciale
-     </h4>
-<p>
-      Automatizza risposte, proposte e follow-up per i clienti.
-     </p>
-</div>
-</div>
+<div class="grid"><div class="card"><h4>Agenzia marketing</h4><p>Automatizza la generazione di contenuti per i clienti: email, script, landing e post settimanali.</p></div><div class="card"><h4>Studio di consulenza</h4><p>Utilizza il tuo AI Agent per generare report, follow-up e contenuti formativi personalizzati.</p></div><div class="card"><h4>E-commerce team</h4><p>Integra Agent AI per descrizioni prodotto, automazione email post-vendita e gestione clienti.</p></div></div>
 </section>
 <section class="footer-cta">
 <h2>
@@ -233,5 +206,39 @@
     });
   });
   </script>
-</body>
+<script>
+    const data = {
+    "sales": { title: "Sales Closer AI", desc: "Simula una chat di vendita per convincere e chiudere clienti." },
+"ads": { title: "Ads Optimizer AI", desc: "Genera annunci testabili per Meta e Google Ads." },
+"support": { title: "Customer Support AI", desc: "Gestisce assistenza clienti 24/7 con script personalizzati." },
+"upsell": { title: "Ecommerce Upsell AI", desc: "Suggerisce upsell/cross-sell personalizzati dopo l'acquisto." },
+"video": { title: "TikTok Auto-Producer", desc: "Genera video TikTok completi di script, voce e sottotitoli." }
+    };
+
+    function updateCardContent() {
+      const selected = document.getElementById("agentSelect").value;
+      const title = document.getElementById("agentTitle");
+      const desc = document.getElementById("agentDesc");
+
+      document.querySelectorAll("#lottie-icons lottie-player").forEach(p => p.style.display = "none");
+      const active = document.getElementById("icon-" + selected);
+      if (active) {
+        active.style.display = "block";
+        active.style.opacity = 0;
+        active.style.transform = "scale(0.8)";
+        setTimeout(() => {
+          active.style.transition = "all 0.4s ease";
+          active.style.opacity = 1;
+          active.style.transform = "scale(1)";
+        }, 10);
+      }
+
+      title.textContent = data[selected].title;
+      desc.style.opacity = 0;
+      setTimeout(() => {
+        desc.textContent = data[selected].desc;
+        desc.style.opacity = 1;
+      }, 200);
+    }
+    </script></body>
 </html>
