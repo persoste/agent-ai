@@ -5,16 +5,100 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Scopri Nexora AI: agenti intelligenti per automazione, contenuti e crescita del tuo business. Sblocca il potenziale dell'AI su misura." name="description"/>
-<meta content="AI Agent, Intelligenza Artificiale, Automazione Business, GPT, Claude AI, Nexora, Servizi AI, Assistenti AI" name="keywords"/>
-<meta content="Nexora AI Studio" name="author"/>
-<meta content="Nexora AI - Agenti Intelligenti per il tuo business" property="og:title"/>
-<meta content="Costruiamo AI Agent personalizzati per ogni esigenza. Dai contenuti alla strategia, tutto automatizzato." property="og:description"/>
-<meta content="https://nexora.ai/assets/preview.png" property="og:image"/>
-<meta content="https://nexora.ai/" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card">
-<title>Nexora AI - Agenti AI su misura</title>
-</meta></head>
+<title>Richiedi il tuo Agent AI | Agent AI Studio</title>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e8d9ff, #d0c1ec);
+      color: #111;
+      padding: 3rem 1rem;
+    }
+    h1 {
+      font-family: 'Clash Display', sans-serif;
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
+    }
+    label {
+      display: block;
+      font-family: 'Clash Display', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 0.8rem;
+      border: 1px solid #ccc;
+      background: #fdfdfd;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(94, 61, 234, 0.25);
+    
+      border-color: #5e3dea;
+      box-shadow: 0 0 0 2px #e8d9ff;
+      background: #fff;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1.1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: #5e3dea;
+      color: white;
+      border: none;
+      border-radius: 0.9rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      font-family: 'Clash Display', sans-serif;
+    }
+    button:hover {
+      background: #3e2ab1;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+  
+    label.active {
+      transform: translateY(-1.8rem);
+      font-size: 0.95rem;
+      color: #5e3dea;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #5e3dea;
+      box-shadow: 0 0 0 3px rgba(94, 61, 234, 0.2);
+    }
+    label {
+      transition: all 0.25s ease;
+    }
+    </style>
+</head>
 <body>
 <style>
   .floating-bg {
@@ -116,7 +200,7 @@
 <div class="sphere sphere3"></div>
 </div>
 <h1 id="title">Richiedi il tuo Agent AI Personalizzato</h1>
-<form action="https://formspree.io/f/xvgrbqbn" id="aiForm">
+<form action="https://formspree.io/f/xvgrbqbn" id="aiForm" method="POST">
 <label for="name">Nome e Cognome</label>
 <input id="name" required="" type="text"/>
 <label for="email">Email di contatto</label>
@@ -148,6 +232,11 @@
 <textarea id="other" placeholder="Scrivi qui qualsiasi dettaglio extra."></textarea>
 <button type="submit">Invia richiesta</button>
 </form>
+<div id="thanks-message" style="display:none; text-align:center;">
+<h3>✅ Richiesta inviata con successo!</h3>
+<a class="btn-home" href="index.html">Torna alla Home</a>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
 <script>
@@ -188,26 +277,21 @@ gsap.from(split.chars, {
     });
   });
 
-  document.getElementById("aiForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    window.location.href = "success.html";
-  });
-</script>
-<div id="thanks-message" style="display:none; text-align:center;"><h3>✅ Richiesta inviata con successo!</h3><a class="btn-home" href="index.html">Torna alla Home</a></div>
-<script>
-  const form = document.querySelector("form");
+  const formElement = document.getElementById("aiForm");
   const thanks = document.getElementById("thanks-message");
 
-  form?.addEventListener("submit", function (e) {
+  formElement.addEventListener("submit", function(e) {
     e.preventDefault();
-    const data = new FormData(form);
-    fetch(form.action, {
+    const data = new FormData(formElement);
+    fetch(formElement.action, {
       method: "POST",
       body: data,
-      headers: { Accept: "application/json" }
+      headers: {
+        Accept: "application/json"
+      }
     }).then(response => {
       if (response.ok) {
-        form.style.display = "none";
+        formElement.style.display = "none";
         thanks.style.display = "block";
       } else {
         alert("Errore nell'invio. Riprova.");
