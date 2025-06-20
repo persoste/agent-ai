@@ -215,7 +215,7 @@
 <div class="sphere sphere3"></div>
 </div>
 <h1 id="title">Richiedi il tuo Agent AI Personalizzato</h1>
-<form action="https://formspree.io/f/xvgrbqbn" id="aiForm" method="POST"><input name="_redirect" type="hidden" value="thank-you.html"/>
+<form action="https://formspree.io/f/xvgrbqbn" id="aiForm" method="POST" onsubmit="return false;"><input name="_redirect" type="hidden" value="thank-you.html"/>
 <label for="name">Nome e Cognome</label>
 <input id="name" name="name" required="" type="text"/>
 <label for="email">Email di contatto</label>
@@ -247,5 +247,36 @@
 <textarea id="other" name="other" placeholder="Scrivi qui qualsiasi dettaglio extra."></textarea>
 <button type="submit">Invia richiesta</button>
 </form>
-</body>
+<div id="success-message" style="display:none;text-align:center;font-weight:bold;font-size:1.2rem;color:green;margin-top:2rem;">✅ Richiesta inviata! Verrai reindirizzato alla home...</div><script>
+const form = document.getElementById("aiForm");
+const successMessage = document.getElementById("success-message");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const formData = new FormData(form);
+
+  fetch("https://formspree.io/f/xvgrbqbn", {
+    method: "POST",
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      form.style.display = "none";
+      successMessage.style.display = "block";
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 4000);
+    } else {
+      alert("Errore durante l'invio. Riprova.");
+    }
+  })
+  .catch(error => {
+    alert("Errore di rete. Riprova.");
+  });
+});
+</script></body>
 </html>
