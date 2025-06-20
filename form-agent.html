@@ -200,13 +200,13 @@
 <div class="sphere sphere3"></div>
 </div>
 <h1 id="title">Richiedi il tuo Agent AI Personalizzato</h1>
-<form action="https://formspree.io/f/xvgrbqbn" id="aiForm" method="POST">
+<form id="aiForm">
 <label for="name">Nome e Cognome</label>
 <input id="name" name="name" required="" type="text"/>
 <label for="email">Email di contatto</label>
 <input id="email" name="email" required="" type="email"/>
 <label for="ai-type">Tipo di AI desiderata</label>
-<select id="ai-type" required="">
+<select id="ai-type" name="ai_type" required="">
 <option value="">-- Seleziona --</option>
 <option>Email Automation</option>
 <option>CRM Assistant</option>
@@ -216,9 +216,9 @@
 <option>Altro</option>
 </select>
 <label for="desc">Descrizione personalizzata (opzionale)</label>
-<textarea id="desc" placeholder="Es: Voglio un agent AI che risponda su WhatsApp e invii log su Notion."></textarea>
+<textarea id="desc" name="descrizione" placeholder="Es: Voglio un agent AI che risponda su WhatsApp e invii log su Notion."></textarea>
 <label for="tone">Voce e tono preferito</label>
-<select id="tone">
+<select id="tone" name="tone">
 <option value="">-- Seleziona --</option>
 <option>Professionale</option>
 <option>Empatico</option>
@@ -227,15 +227,11 @@
 <option>Neutro</option>
 </select>
 <label for="tools">Strumenti o integrazioni da collegare</label>
-<textarea id="tools" placeholder="Es: Zapier, Google Calendar, Notion, Stripe..."></textarea>
+<textarea id="tools" name="tools" placeholder="Es: Zapier, Google Calendar, Notion, Stripe..."></textarea>
 <label for="other">Altro da comunicarci?</label>
-<textarea id="other" placeholder="Scrivi qui qualsiasi dettaglio extra."></textarea>
+<textarea id="other" name="other" placeholder="Scrivi qui qualsiasi dettaglio extra."></textarea>
 <button type="submit">Invia richiesta</button>
 </form>
-<div id="thanks-message" style="display:none; text-align:center;">
-<h3>✅ Richiesta inviata con successo!</h3>
-<a class="btn-home" href="index.html">Torna alla Home</a>
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
 <script>
@@ -282,24 +278,28 @@ gsap.from(split.chars, {
   });
 </script>
 <script>
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("aiForm");
   const thanks = document.getElementById("thanks-message");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { Accept: "application/json" }
-    }).then(response => {
-      if (response.ok) {
-        form.style.display = "none";
-        thanks.style.display = "block";
-      } else {
-        alert("Errore nell'invio. Riprova.");
-      }
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = "none";
+          thanks.style.display = "block";
+        } else {
+          alert("Errore nell'invio del modulo.");
+        }
+      });
     });
-  });
+  }
+});
 </script></body>
 </html>
