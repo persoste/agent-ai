@@ -82,7 +82,7 @@ con Nexora AI</h1>
 <button onclick="scrollToSection('#pacchetti', 600)" style="font-family: Satoshi, sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;">
      Scopri i nostri servizi
     </button>
-<button onclick="scrollToSection('#form-section', 800)" style="font-family: Satoshi, sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;">
+<button id="scroll-to-form" style="font-family: Satoshi, sans-serif; font-weight: bold; font-size: 1rem; border-radius: 10px;">
      Crea la tua Agent AI
     </button>
 </div>
@@ -444,6 +444,20 @@ function scrollToSection(id, duration) {
 
   document.addEventListener("click", function () {
     document.getElementById("settings-menu").style.display = "none";
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const agentBtn = document.getElementById("scroll-to-form");
+    if (agentBtn) {
+      agentBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        scrollToSection("#form-section", 800);
+      });
+    }
   });
 </script>
 
