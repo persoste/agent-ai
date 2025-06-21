@@ -33,7 +33,39 @@
     stroke: #3e2ab1;
   }
   </style>
-<link href="style.css" rel="stylesheet"/></head>
+<link href="style.css" rel="stylesheet"/><style>
+/* Colori coerenti */
+body, p, li, a, span, div, section {
+    color: #111 !important;
+}
+
+/* Titoli */
+h1, h2, h3, h4 {
+    color: #111 !important;
+    font-family: 'Clash Display', sans-serif;
+}
+
+/* Eccezioni su contenitori Glass */
+#form-section > div, .glass-container {
+    color: #f5f5f5 !important;
+}
+
+/* Pulsanti */
+button, .button, a.button {
+    color: #fff !important;
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+button:hover, .button:hover {
+    transform: scale(1.05);
+}
+</style></head>
 <body><header class="navbar"><a href="index.html" style="display: flex; align-items: center; text-decoration: none;"><img alt="Nexora AI" src="logo.png" style="height: 120px; object-fit: contain; display: block; margin-top: -32px; margin-bottom: -32px;"/><nav style="display: flex; gap: 1.5rem;"><a href="chi-siamo.html" style="font-family: 'Satoshi', sans-serif; font-weight: 600; color: #111;text-decoration: none; transition: color 0.3s ease;">Chi siamo</a><a href="contatti.html" style="font-family: 'Satoshi', sans-serif; font-weight: 600; color: #111;text-decoration: none; transition: color 0.3s ease;">Contattaci</a></nav></a></header>
 <div id="preloader">
 <div class="container">
@@ -254,29 +286,28 @@ con Nexora AI</h1>
 <h2 style="text-align: center; font-size: 2.2rem; font-weight: bold; margin-bottom: 2rem;">
     Richiedi il tuo Agent AI Personalizzato
    </h2>
-<div style="max-width: 800px; margin: 0 auto; padding: 2.5rem; background: #ffffff; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; gap: 1.5rem;">
-<h3>
+<div style="max-width: 800px; margin: 0 auto; padding: 2.5rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); text-align: left; display: flex; flex-direction: column; gap: 1.5rem;">
+<h3 style="font-family: 'Satoshi', sans-serif; font-weight: 500; color: #fff;">
      ✅ Pacchetto completo di agenti AI su misura
     </h3>
-<ul>
-<li>
+<ul style="font-family: 'Satoshi', sans-serif; font-weight: 500; color: #fff;">
+<li style="font-family: 'Satoshi', sans-serif; font-weight: 500; color: #fff;">
       1 agent AI ottimizzato per email, vendite, supporto o CRM
      </li>
-<li>
+<li style="font-family: 'Satoshi', sans-serif; font-weight: 500; color: #fff;">
       Integrazione diretta con Zapier, API, GPT e strumenti business
      </li>
-<li>
+<li style="font-family: 'Satoshi', sans-serif; font-weight: 500; color: #fff;">
       Voce e tono personalizzati per il tuo brand
      </li>
-<li>
+<li style="font-family: 'Satoshi', sans-serif; font-weight: 500; color: #fff;">
       Supporto VIP 24/7 + aggiornamenti settimanali
      </li>
 </ul>
-<p style="font-size: 1.3rem; font-weight: bold;">€5.499 una tantum + €399/mese</p>
-<a href="form-agent.html" style="background: black; color: white; padding: 0.9rem 1.5rem; border-radius: 10px; font-weight: bold; width: fit-content; text-decoration: none;">
+<p style="font-size: 1.3rem; font-weight: bold;font-family: 'Satoshi', sans-serif; font-weight: 500; color: #fff;">€5.499 una tantum + €399/mese</p>
+<a href="form-agent.html" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.05)'" style="background: linear-gradient(135deg, #7F00FF 0%, #E100FF 100%); color: white; padding: 1rem 2rem; border-radius: 12px; font-weight: bold; width: fit-content; text-decoration: none; font-size: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.3); transition: transform 0.2s ease-in-out;">
      Scopri di più
     </a></div>
-
 </section>
 <footer class="site-footer">
 <p>
@@ -405,4 +436,3 @@ function scrollToSection(id, duration) {
     if (menu) menu.style.display = "none";
   });
 </script>
-
