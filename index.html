@@ -52,7 +52,7 @@
   }
   </style>
 <link href="style.css" rel="stylesheet"/></head>
-<body><header class="navbar"><a href="index.html" style="display: flex; align-items: center; text-decoration: none;"><img alt="Nexora AI" src="logo.png" style="height: 120px; object-fit: contain; display: block; margin-top: -32px; margin-bottom: -32px;"/></a><nav style="display: flex; gap: 1.5rem;"><a href="chi-siamo.html" style="font-family: 'Satoshi', sans-serif; font-weight: 600; color: #111;text-decoration: none; transition: color 0.3s ease;">Chi siamo</a><a href="contatti.html" style="font-family: 'Satoshi', sans-serif; font-weight: 600; color: #111;text-decoration: none; transition: color 0.3s ease;">Contattaci</a></nav></header>
+<body><header class="navbar"><a href="index.html" style="display: flex; align-items: center; text-decoration: none;"><img alt="Nexora AI" src="logo.png" style="height: 120px; object-fit: contain; display: block; margin-top: -32px; margin-bottom: -32px;"/></div><nav style="display: flex; gap: 1.5rem;"><a href="chi-siamo.html" style="font-family: 'Satoshi', sans-serif; font-weight: 600; color: #111;text-decoration: none; transition: color 0.3s ease;">Chi siamo</div><a href="contatti.html" style="font-family: 'Satoshi', sans-serif; font-weight: 600; color: #111;text-decoration: none; transition: color 0.3s ease;">Contattaci</div></nav></header>
 <div id="preloader">
 <div class="container">
 <div class="dot">
@@ -293,7 +293,7 @@ con Nexora AI</h1>
 <p style="font-size: 1.3rem; font-weight: bold;">€5.499 una tantum + €399/mese</p>
 <a href="form-agent.html" style="background: black; color: white; padding: 0.9rem 1.5rem; border-radius: 10px; font-weight: bold; width: fit-content; text-decoration: none;">
      Scopri di più
-    </a>
+    </div>
 </div>
 </section>
 <footer class="site-footer">
@@ -333,12 +333,12 @@ function scrollToSection(id, duration) {
 
 
 
-<a class="floating-settings" href="impostazioni.html" title="Impostazioni">
+<div class="floating-settings" onclick="toggleSettingsMenu()" title="Impostazioni">
 <svg fill="white" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 0h24v24H0z" fill="none"></path>
 <path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.06-.94l2.03-1.58c.18-.14.22-.4.1-.59l-1.92-3.32c-.12-.19-.37-.26-.57-.17l-2.39.96a7.025 7.025 0 0 0-1.63-.94l-.36-2.54A.488.488 0 0 0 14 2h-4c-.24 0-.44.17-.48.41l-.36 2.54c-.6.22-1.16.52-1.63.94l-2.39-.96a.5.5 0 0 0-.57.17L2.73 8.89c-.12.19-.08.45.1.59l2.03 1.58c-.04.3-.06.61-.06.94s.02.64.06.94L2.83 13.94c-.18.14-.22.4-.1.59l1.92 3.32c.12.19.37.26.57.17l2.39-.96c.47.42 1.03.77 1.63.94l.36 2.54c.04.24.24.41.48.41h4c.24 0 .44-.17.48-.41l.36-2.54c.6-.22 1.16-.52 1.63-.94l2.39.96c.2.08.45.01.57-.17l1.92-3.32c.12-.19.08-.45-.1-.59l-2.03-1.58zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path>
 </svg>
-</a>
+</div>
 <style>
 .floating-settings {
   position: fixed;
@@ -359,5 +359,56 @@ function scrollToSection(id, duration) {
   display: block;
 }
 </style>
+
+<!-- Impostazioni Dropdown -->
+<div class="settings-menu" id="settings-menu">
+  <button onclick="changeLang()">🌐 Lingua: IT/EN</button>
+  <button onclick="toggleDarkMode()">🌓 Modalità: Light/Dark</button>
+  <button onclick="location.reload()">🔄 Ricarica</button>
+</div>
+
+<style>
+  .settings-menu {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+  }
+  .settings-menu button {
+    all: unset;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  .settings-menu button:hover {
+    background: #efefef;
+  }
+</style>
+
+<script>
+  function toggleSettingsMenu() {
+    const menu = document.getElementById('settings-menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function changeLang() {
+    alert('🚧 Cambio lingua non ancora attivo. Prossimamente: IT ⇄ EN');
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+
 </body>
 </html>
