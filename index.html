@@ -15,24 +15,7 @@
 <meta content="website" property="og:type"/>
 <meta content="https://agentai.studio" property="og:url"/>
 <meta content="https://agentai.studio/preview.png" property="og:image"/>
-<script>
-   function scrollToSection(id, speed) {
-      const target = document.querySelector(id);
-      if (!target) return;
-      const position = target.getBoundingClientRect().top + window.scrollY;
-      let start = null;
-      window.requestAnimationFrame(function step(timestamp) {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        const easing = progress < speed ? progress / speed : 1 + 1.5 * (progress - speed) / 200;
-        const scrollTo = Math.min(window.scrollY + easing * 15, position);
-        window.scrollTo(0, scrollTo);
-        if (scrollTo < position) {
-          window.requestAnimationFrame(step);
-        }
-      });
-    }
-  </script>
+
 <style>
    .icon-box {
     margin-bottom: 1rem;
@@ -409,6 +392,32 @@ function scrollToSection(id, duration) {
   function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
   }
+</script>
+
+
+<script>
+function scrollToSection(id, duration) {
+  const target = document.querySelector(id);
+  if (!target) return;
+  const targetPos = target.getBoundingClientRect().top + window.scrollY;
+  const startPos = window.scrollY;
+  const distance = targetPos - startPos;
+  let startTime = null;
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easeOutCubic(timeElapsed / duration) * distance + startPos;
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  requestAnimationFrame(animation);
+}
 </script>
 
 </body>
