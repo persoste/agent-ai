@@ -316,7 +316,7 @@ function scrollToSection(id, duration) {
 
 
 
-<div class="floating-settings" onclick="event.stopPropagation(); toggleSettingsMenu()" title="Impostazioni">
+<div class="floating-settings" onclick="toggleSettingsMenu(event)" title="Impostazioni">
 <svg fill="white" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 0h24v24H0z" fill="none"></path>
 <path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.06-.94l2.03-1.58c.18-.14.22-.4.1-.59l-1.92-3.32c-.12-.19-.37-.26-.57-.17l-2.39.96a7.025 7.025 0 0 0-1.63-.94l-.36-2.54A.488.488 0 0 0 14 2h-4c-.24 0-.44.17-.48.41l-.36 2.54c-.6.22-1.16.52-1.63.94l-2.39-.96a.5.5 0 0 0-.57.17L2.73 8.89c-.12.19-.08.45.1.59l2.03 1.58c-.04.3-.06.61-.06.94s.02.64.06.94L2.83 13.94c-.18.14-.22.4-.1.59l1.92 3.32c.12.19.37.26.57.17l2.39-.96c.47.42 1.03.77 1.63.94l.36 2.54c.04.24.24.41.48.41h4c.24 0 .44-.17.48-.41l.36-2.54c.6-.22 1.16-.52 1.63-.94l2.39.96c.2.08.45.01.57-.17l1.92-3.32c.12-.19.08-.45-.1-.59l-2.03-1.58zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path>
@@ -369,6 +369,8 @@ function scrollToSection(id, duration) {
     z-index: 999999;
   }
   .settings-menu button {
+    color: #111;
+    background-color: #fff;
     all: unset;
     font-family: 'Satoshi', sans-serif;
     font-weight: 600;
@@ -400,7 +402,9 @@ function scrollToSection(id, duration) {
 </style>
 
 <script>
-  function toggleSettingsMenu() {
+  function toggleSettingsMenu(event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
     const menu = document.getElementById("settings-menu");
     if (!menu) return;
     menu.style.display = menu.style.display === "flex" ? "none" : "flex";
@@ -413,24 +417,9 @@ function scrollToSection(id, duration) {
 </script>
 
 
-<div class="settings-menu" id="settings-menu">
-  <button onclick="event.stopPropagation(); alert('🌐 Cambio lingua')">🌐 Lingua: IT/EN</button>
-  <button onclick="event.stopPropagation(); alert('🌓 Cambio modalità')">🌓 Modalità</button>
-  <button onclick="event.stopPropagation(); location.reload()">🔄 Ricarica</button>
-</div>
 
-<script>
-  function toggleSettingsMenu() {
-    const menu = document.getElementById("settings-menu");
-    if (!menu) return;
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-  }
 
-  document.addEventListener("click", () => {
-    const menu = document.getElementById("settings-menu");
-    if (menu) menu.style.display = "none";
-  });
-</script>
+
 
 </body>
 </html>
