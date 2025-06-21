@@ -15,24 +15,7 @@
 <meta content="website" property="og:type"/>
 <meta content="https://agentai.studio" property="og:url"/>
 <meta content="https://agentai.studio/preview.png" property="og:image"/>
-<script>
-   function scrollToSection(id, speed) {
-      const target = document.querySelector(id);
-      if (!target) return;
-      const position = target.getBoundingClientRect().top + window.scrollY;
-      let start = null;
-      window.requestAnimationFrame(function step(timestamp) {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        const easing = progress < speed ? progress / speed : 1 + 1.5 * (progress - speed) / 200;
-        const scrollTo = Math.min(window.scrollY + easing * 15, position);
-        window.scrollTo(0, scrollTo);
-        if (scrollTo < position) {
-          window.requestAnimationFrame(step);
-        }
-      });
-    }
-  </script>
+
 <style>
    .icon-box {
     margin-bottom: 1rem;
@@ -360,11 +343,20 @@ function scrollToSection(id, duration) {
 }
 </style>
 
-<!-- Impostazioni Dropdown -->
+</html>
+
+<!-- Impostazioni Dropdown FINAL -->
 <div class="settings-menu" id="settings-menu">
-  <button onclick="event.stopPropagation(); alert('Lingua non attiva')">🌐 Lingua: IT/EN</button>
-  <button onclick="event.stopPropagation(); alert('Tema non disponibile')">🌓 Tema</button>
+  <button onclick="event.stopPropagation(); alert('🌐 Lingua non disponibile')">🌐 Lingua: IT/EN</button>
+  <button onclick="event.stopPropagation(); alert('🌓 Tema non disponibile')">🌓 Modalità</button>
   <button onclick="event.stopPropagation(); location.reload()">🔄 Ricarica</button>
+</div>
+
+<div class="floating-settings" onclick="event.stopPropagation(); toggleSettingsMenu()" title="Impostazioni">
+  <svg fill="white" height="24" viewBox="0 0 24 24" width="24">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.06-.94l2.03-1.58c.18-.14.22-.4.1-.59l-1.92-3.32c-.12-.19-.37-.26-.57-.17l-2.39.96a7.025 7.025 0 0 0-1.63-.94l-.36-2.54A.488.488 0 0 0 14 2h-4c-.24 0-.44.17-.48.41l-.36 2.54c-.6.22-1.16.52-1.63.94l-2.39-.96a.5.5 0 0 0-.57.17L2.73 8.89c-.12.19-.08.45.1.59l2.03 1.58c-.04.3-.06.61-.06.94s.02.64.06.94L2.83 13.94c-.18.14-.22.4-.1.59l1.92 3.32c.12.19.37.26.57.17l2.39-.96c.47.42 1.03.77 1.63.94l.36 2.54c.04.24.24.41.48.41h4c.24 0 .44-.17.48-.41l.36-2.54c.6-.22 1.16-.52 1.63-.94l2.39.96c.2.08.45.01.57-.17l1.92-3.32c.12-.19.08-.45-.1-.59l-2.03-1.58zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path>
+  </svg>
 </div>
 
 <style>
@@ -392,6 +384,23 @@ function scrollToSection(id, duration) {
   }
   .settings-menu button:hover {
     background: #efefef;
+  }
+
+  .floating-settings {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    padding: 14px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 999999;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .floating-settings:hover {
+    transform: scale(1.15);
   }
 </style>
 
