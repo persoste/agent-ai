@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Satoshi', sans-serif;
@@ -196,4 +195,61 @@ button {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.floating-settings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #5e3dea;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+.settings-menu {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  z-index: 1000;
+}
+.settings-menu button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #f5f5f5;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.7rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.settings-menu button:hover {
+  background: #e0d6ff;
+}
+.settings-menu.hidden {
+  display: none;
+}
+body.dark-mode {
+  background: #111;
+  color: #eee;
+}
+body.dark-mode .settings-menu {
+  background: #1d1d1d;
+}
+body.dark-mode .settings-menu button {
+  background: #333;
+  color: #eee;
+}
+body.dark-mode .settings-menu button:hover {
+  background: #444;
 }
